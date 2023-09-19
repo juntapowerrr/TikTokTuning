@@ -245,8 +245,8 @@ body {
   font-weight: 700;
   font-size: 16px;
   background: linear-gradient(137.99deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
 }
 .header .btn {
   z-index: 3;
