@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikTok Tuning - Svetlana Lozinska</title>
     <link rel="stylesheet" href="./styles/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
@@ -39,9 +42,9 @@
         </div>
     </header>
     <div class="main">
-        <img class="light-1" src="./assets/svg/bg-lights/light-1.svg" alt="Background blue light">
+        <!-- <img class="light-1" src="./assets/svg/bg-lights/light-1.svg" alt="Background blue light">
         <img class="light-2" src="./assets/svg/bg-lights/light-2.svg" alt="Background blue light">
-        <img class="light-3" src="./assets/svg/bg-lights/light-3.svg" alt="Background blue light">
+        <img class="light-3" src="./assets/svg/bg-lights/light-3.svg" alt="Background blue light"> -->
         <div class="container row">
             <div class="main-left">
                 <ul class="btns-info">
@@ -52,7 +55,9 @@
                 <h1 class="title" id="Title1">
                     Знаю як<br> зробити твій<br> акаунт в TikTok<br> популярним!
                 </h1>
-                <p class="txt-places" id="Subtitle1">Встигни прийняти участь. Залишилось місць: 12</p>
+                <p class="txt-places" id="Subtitle1">Встигни прийняти участь.
+                     До зміни вартості залишилось 10 днів.
+                </p>
                 <div class="btns-cta">
                     <button class="btn btn-cta" id="BtnCta2">Прийняти участь</button>
                     <button class="btn btn-cta2" id="BtnCta3">Програма курсу</button>
@@ -64,9 +69,9 @@
         </div>
     </div>
     <section class="about">
-        <img class="light-4" src="./assets/svg/bg-lights/light-4.svg" alt="Background blue light">
+        <!-- <img class="light-4" src="./assets/svg/bg-lights/light-4.svg" alt="Background blue light">
         <img class="light-5" src="./assets/svg/bg-lights/light-5.svg" alt="Background blue light">
-        <img class="light-6" src="./assets/svg/bg-lights/light-6.svg" alt="Background blue light">
+        <img class="light-6" src="./assets/svg/bg-lights/light-6.svg" alt="Background blue light"> -->
         <div class="container">
             <h2 class="title" id="Title2">Навчайся, якщо ти:</h2>
             <div class="cards">
@@ -500,6 +505,29 @@
                     <button class="btn btn-cta3">Купити</button>
                 </div>
             </div>
+            <div class="price-box-mob">
+                <div class="price-box-mob__card">
+                    <h3>Lite</h3>
+                    <p>Для тих, хто хоче все і відразу</p>
+                    <span>$230</span>
+                    <span>Детально</span>
+                    <button class="btn btn-cta4">Купити</button>
+                </div>
+                <div class="price-box-mob__card">
+                    <h3>Lite</h3>
+                    <p>Для тих, хто хоче все і відразу</p>
+                    <span class="txt-price">$230</span>
+                    <span class="about-course">Детально</span>
+                    <button class="btn btn-cta3">Купити</button>
+                </div>
+                <div class="price-box-mob__card">
+                    <h3>Lite</h3>
+                    <p>Для тих, хто хоче все і відразу</p>
+                    <span>$230</span>
+                    <span>Детально</span>
+                    <button class="btn btn-cta4">Купити</button>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -509,5 +537,6 @@
         ScrollReveal({ reset: true });
     </script>
     <script src="./js/animation.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

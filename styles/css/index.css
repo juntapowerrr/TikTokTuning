@@ -72,7 +72,7 @@ button {
   background: linear-gradient(90.07deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%), linear-gradient(137.99deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%);
 }
 .btn-cta2 {
-  color: white;
+  color: #fff;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 4px 10px 0px rgba(93, 177, 223, 0.1);
 }
@@ -80,6 +80,10 @@ button {
   color: #030B59;
   background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
   box-shadow: 0px 4px 10px 0px rgba(93, 177, 223, 0.1);
+}
+.btn-cta4 {
+  color: #fff;
+  background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
 }
 
 body {
@@ -143,11 +147,13 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    border: 1px solid #fff;
     position: relative;
     z-index: 3;
   }
   .header__burger::before, .header__burger::after {
     content: "";
+    background-color: #fff;
     position: absolute;
     width: 12px;
     height: 2px;
@@ -207,13 +213,14 @@ body {
 }
 @media (max-width: 767px) {
   .header__menu {
+    flex-direction: column;
     position: fixed;
     top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
     transition: all 0.3s ease 0s;
-    background-color: rgba(3, 11, 89, 0.9);
+    background-color: #030b59;
     padding: 90px 15px 20px 15px;
   }
   .header__menu.active {
@@ -237,6 +244,11 @@ body {
   margin: 0 24px 0 0;
 }
 @media (max-width: 767px) {
+  .header__list li {
+    margin: 20px 0;
+  }
+}
+@media (max-width: 767px) {
   .header__list {
     display: block;
   }
@@ -254,7 +266,7 @@ body {
 }
 
 .main {
-  padding-top: 74px;
+  padding: 74px 0 0 0;
   position: relative;
 }
 .main .light-1 {
@@ -319,6 +331,7 @@ body {
   line-height: 22px;
   color: #CFD9E1;
   margin: 20px 0 0 0;
+  max-width: 450px;
 }
 .main-left .btns-cta {
   display: flex;
@@ -397,6 +410,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
   padding: 4px 10px;
+  white-space: nowrap;
 }
 .about .subtitle-txt {
   color: #CFD9E1;
@@ -553,10 +567,10 @@ body {
   height: 30px;
 }
 .tuning .card {
+  width: 194px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 0 200px;
   height: 115px;
   padding: 5px;
   border-radius: 24px;
@@ -830,4 +844,209 @@ body {
   align-items: center;
   gap: 64px;
   padding: 30px;
+}
+.price-box-mob {
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.price-box-mob__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 335px;
+  padding: 25px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
+}
+.price-box-mob__card:nth-child(even) {
+  background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
+}
+.price-box-mob__card:nth-child(even) h3, .price-box-mob__card:nth-child(even) .txt-price {
+  background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.price-box-mob__card:nth-child(even) p {
+  color: #CFD9E1;
+}
+.price-box-mob__card:nth-child(even) .about-course {
+  color: #CFD9E1;
+}
+.price-box-mob__card h3 {
+  color: #030B59;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.333px;
+}
+.price-box-mob__card p {
+  color: #030B59;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.233px;
+  margin: 10px 0;
+}
+.price-box-mob__card span {
+  color: #030B59;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+.price-box-mob__card span:nth-last-child(2) {
+  color: #030B59;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 65px 0 0 0;
+}
+.price-box-mob__card .btn {
+  margin: 15px 0 0 0;
+}
+
+@media (max-width: 1255px) {
+  .about .cards {
+    flex-direction: column;
+  }
+  .about .card {
+    width: 100%;
+    height: 135px;
+    padding: 12px 24px;
+  }
+  .about .achievements {
+    padding: 0;
+    margin: 44px 0 0 0;
+  }
+  .about .quote-txt {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+  .about .quote-author {
+    position: static;
+    padding: 24px 0;
+    gap: 12px;
+    justify-content: center;
+  }
+  .about .quote span {
+    font-size: 16px;
+  }
+  .about .story {
+    margin: 24px 0 0 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .about .story img {
+    display: none;
+  }
+  .about .story-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .about .story-txt {
+    max-width: 100%;
+  }
+  .tuning {
+    padding: 54px 0;
+  }
+}
+@media (max-width: 1150px) {
+  .price {
+    padding: 44px 0;
+  }
+  .price-bg1, .price-bg2 {
+    display: none;
+  }
+  .price .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .price .txt {
+    display: none;
+  }
+  .price .price-box {
+    display: none;
+  }
+}
+@media (min-width: 1151px) {
+  .price-box-mob {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .tuning-container .vector-1, .tuning-container .vector-2 {
+    display: none;
+  }
+  .tuning .cards {
+    gap: 2px;
+    border: none;
+    border-radius: 0;
+    max-width: 100%;
+    position: static;
+  }
+  .tuning .cards::before {
+    display: none;
+  }
+  .tuning .card {
+    width: 48%;
+    height: 166px;
+  }
+}
+@media (max-width: 1050px) {
+  .main .row {
+    flex-direction: column;
+  }
+  .main-left .btns-info {
+    padding: 44px 0;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .main-left .title {
+    margin: 0 0 0 0;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .main-left .txt-places {
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 290px;
+  }
+  .main-left .btns-cta {
+    flex-direction: column;
+    margin: 32px 0 0 0;
+    gap: 14px;
+  }
+  .about .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .about .cards {
+    margin: 22px 0 0 0;
+  }
+  .about .txt {
+    font-size: 12px;
+    margin: 12px 0 0 0;
+  }
+  .tuning .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 860px) {
+  .price-box-mob {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .price-box-mob__card {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }

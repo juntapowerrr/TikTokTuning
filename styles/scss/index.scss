@@ -23,7 +23,7 @@ body{
         height: 100%;
         z-index: 2;
         background: linear-gradient(90.07deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%),
-linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+        linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
         border-bottom: 1px solid #FFFFFF26;
     }
     &__body{
@@ -90,12 +90,12 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            //border: 1px solid $dark-green;
+            border: 1px solid #fff;
             position: relative;
             z-index: 3;
             &::before, &::after{
                 content: '';
-                //background-color: $dark-green;
+                background-color: #fff;
                 position: absolute;
                 width: 12px;
                 height: 2px;
@@ -158,13 +158,14 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
         display: flex;
         align-items: center;
         @media (max-width: 767px){
+            flex-direction: column;
             position: fixed;
             top: -100%;
             left: 0;
             width: 100%;
             height: 100%;
             transition: all .3s ease 0s;
-            background-color: rgba($color: $cta, $alpha: 0.9);
+            background-color: rgba($color: $cta, $alpha: 1);
             padding: 90px 15px 20px 15px;
             &.active{
                 top: 0;
@@ -183,12 +184,12 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
         z-index: 2;
         li{
             margin: 0 24px 0 0;
-            // @media (max-width: 767px){
-            //     margin: 20px 0;
-            //     // &:first-child{
-            //     //     margin: 0 0 20px 0;
-            //     // }
-            // }
+            @media (max-width: 767px){
+                margin: 20px 0;
+                // &:first-child{
+                //     margin: 0 0 20px 0;
+                // }
+            }
         }
         @media (max-width: 767px){
             display: block;
@@ -205,7 +206,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 }
 
 .main{
-    padding-top: 74px;
+    padding: 74px 0 0 0;
     //max-width: 650px;
     position: relative;
     .light-1{
@@ -263,6 +264,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
             line-height: 22px;
             color: $gray;
             margin: 20px 0 0 0;
+            max-width: 450px;
         }
         .btns-cta{
             display: flex;
@@ -340,7 +342,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
         border: 1px solid rgba(255, 255, 255, 0.15);
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
         padding: 4px 10px;
-
+        white-space: nowrap;
         &-txt{
             color: $gray;
             text-align: center;
@@ -494,11 +496,11 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
         }
     }
     .card{
-        //width: 194px;
+        width: 194px;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 0 0 200px;
+        //flex: 0 0 200px;
         height: 115px;
         padding: 5px;
         border-radius: 24px;
@@ -784,4 +786,68 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
         gap: 64px;
         padding: 30px;
     }
+    &-box-mob{
+        margin: 20px 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        &__card{
+            //margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 335px;
+            padding: 25px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: var(--white-linear-silver,
+             linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
+            &:nth-child(even){
+                background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
+                h3, .txt-price{
+                    @include bg-linear-silver;
+                }
+                p{
+                    color: $gray;
+                }
+                .about-course{
+                    color: $gray;
+                }
+                
+            }
+            h3{
+                color: $cta;
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: -0.333px;
+            }
+            p{
+                color: $cta;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: -0.233px;
+                margin: 10px 0;
+            }
+            span{
+                color: $cta;
+                font-size: 36px;
+                font-weight: 500;
+                letter-spacing: -1px;
+                &:nth-last-child(2){
+                    color: $cta;
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin: 65px 0 0 0;
+                }
+            }
+            .btn{
+                margin: 15px 0 0 0;
+            }
+        }
+    }
 }
+
+@import 'media';
