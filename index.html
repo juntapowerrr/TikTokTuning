@@ -24,16 +24,16 @@
                 <nav class="header__menu">
                     <ul class="header__list">
                         <li>
-                            <a href="#" class="header__link">Про курс</a>
+                            <a href="#" class="header__link" id="HeaderLink1">Про курс</a>
                         </li>
                         <li>
-                            <a href="#" class="header__link">Програма</a>
+                            <a href="#" class="header__link" id="HeaderLink1">Програма</a>
                         </li>
                         <li>
-                            <a href="#" class="header__link">Тарифи</a>
+                            <a href="#" class="header__link" id="HeaderLink1">Тарифи</a>
                         </li>
                     </ul>
-                    <button class="btn btn-cta">Прийняти участь</button>
+                    <button class="btn btn-cta" id="BtnCta1">Прийняти участь</button>
                 </nav>
             </div>
         </div>
@@ -45,21 +45,21 @@
         <div class="container row">
             <div class="main-left">
                 <ul class="btns-info">
-                    <li class="btn-info"><span>Старт навчання з 5-го жовтня</span></li>
-                    <li class="btn-info"><span>Онлайн формат</span></li>
-                    <li class="btn-info"><span>Тривалість 30 днів</span></li>
+                    <li class="btn-info" id="BtnInfo1"><span>Старт навчання з 5-го жовтня</span></li>
+                    <li class="btn-info" id="BtnInfo2"><span>Онлайн формат</span></li>
+                    <li class="btn-info" id="BtnInfo3"><span>Тривалість 30 днів</span></li>
                 </ul>
-                <h1 class="title">
+                <h1 class="title" id="Title1">
                     Знаю як<br> зробити твій<br> акаунт в TikTok<br> популярним!
                 </h1>
-                <p class="txt-places">Встигни прийняти участь. Залишилось місць: 12</p>
+                <p class="txt-places" id="Subtitle1">Встигни прийняти участь. Залишилось місць: 12</p>
                 <div class="btns-cta">
-                    <button class="btn btn-cta">Прийняти участь</button>
-                    <button class="btn btn-cta2">Програма курсу</button>
+                    <button class="btn btn-cta" id="BtnCta2">Прийняти участь</button>
+                    <button class="btn btn-cta2" id="BtnCta3">Програма курсу</button>
                 </div>
             </div>
             <div class="main-right">
-                <img class="img" src="./assets/images/main-img.png" alt="Main photo - Svetlana Lozinska">
+                <img class="img" id="MainImg" src="./assets/images/main-img.png" alt="Main photo - Svetlana Lozinska">
             </div>
         </div>
     </div>
@@ -68,9 +68,9 @@
         <img class="light-5" src="./assets/svg/bg-lights/light-5.svg" alt="Background blue light">
         <img class="light-6" src="./assets/svg/bg-lights/light-6.svg" alt="Background blue light">
         <div class="container">
-            <h2 class="title">Навчайся, якщо ти:</h2>
+            <h2 class="title" id="Title2">Навчайся, якщо ти:</h2>
             <div class="cards">
-                <div class="card card-style">
+                <div class="card card-style" id="Card1">
                     <div class="subtitle">
                         <span class="subtitle-txt">😚 Новачок</span>
                     </div>
@@ -80,7 +80,7 @@
                         спілкуванні та творчості.
                     </p>
                 </div>
-                <div class="card card-style">
+                <div class="card card-style" id="Card2">
                     <div class="subtitle">
                         <span class="subtitle-txt">📱 Блогер/Інфлюєнсер</span>
                     </div>
@@ -90,7 +90,7 @@
                         пропозицій від рекламодавців
                     </p>
                 </div>
-                <div class="card card-style">
+                <div class="card card-style" id="Card3">
                     <div class="subtitle">
                         <span class="subtitle-txt">🤓 Експерт</span>
                     </div>
@@ -100,7 +100,7 @@
                         та збільшите попит на свої послуги
                     </p>
                 </div>
-                <div class="card card-style">
+                <div class="card card-style" id="Card4">
                     <div class="subtitle">
                         <span class="subtitle-txt">🌝 Бренд</span>
                     </div>
@@ -109,7 +109,7 @@
                         заявок та продажів. Я навчу, як отримувати їх з TikTok!
                     </p>
                 </div>
-                <div class="card card-style">
+                <div class="card card-style" id="Card5">
                     <div class="subtitle">
                         <span class="subtitle-txt">🤠 SMM Manager</span>
                     </div>
@@ -504,5 +504,10 @@
 
     </section>
     <script src="./js/accordion.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+    <script src="./js/animation.js"></script>
 </body>
 </html>
