@@ -644,11 +644,12 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 34px;
+  transition: all 0.5s ease;
 }
 @media screen and (max-width: 450px) {
   .program .accordeon__button {
     font-size: 14px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 }
 .program .accordeon__button:after {
