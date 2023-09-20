@@ -11,12 +11,14 @@
 }
 
 .btn{
+    display: block;
     width: 200px;
     height: 44px;
     text-align: center;
     font-size: 16px;
     font-weight: 700;
     border-radius: 12px;
+    line-height: 44px;
     &-cta{
         color: $gray;
         border: 1px solid $silver;
