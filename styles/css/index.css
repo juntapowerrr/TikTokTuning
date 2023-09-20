@@ -768,7 +768,7 @@ body {
 }
 .price-box {
   margin: 0 auto;
-  max-width: 1070px;
+  max-width: 100%;
   border-radius: 8px;
   background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
 }
@@ -826,7 +826,7 @@ body {
 .price-item {
   border-radius: 24px;
   background: rgba(3, 11, 89, 0.15);
-  padding: 15px;
+  padding: 15px 35px;
   display: flex;
   align-items: center;
   position: relative;
@@ -842,7 +842,7 @@ body {
   position: absolute;
 }
 .price-item .check-1 {
-  left: 380px;
+  left: 525px;
 }
 .price-item .check-2 {
   right: 345px;
