@@ -419,7 +419,16 @@ body{
             font-size: 16px;
             font-weight: 500;
             line-height: 22px;
-            max-width: 420px;
+            max-width: 450px;
+            position: relative;
+            padding: 0 0 0 30px;
+            &::before{
+                content: '🥇';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+            }
         }
     }
 }
