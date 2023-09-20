@@ -1111,6 +1111,9 @@ body {
     font-size: 30px;
     line-height: 40px;
   }
+  .light-1, .light-2, .light-3, .light-4, .light-5, .light-6 {
+    display: none;
+  }
 }
 @media (max-width: 860px) {
   .price-box-mob {
