@@ -58,10 +58,6 @@ button {
   text-align: center;
 }
 
-.d-none {
-  display: none;
-}
-
 .btn {
   width: 200px;
   height: 44px;
@@ -593,6 +589,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
 }
+.tuning .card:last-child {
+  display: none;
+}
 .tuning .card p {
   padding: 10px;
   color: #CFD9E1;
@@ -616,7 +615,7 @@ body {
   padding: 60px 0 100px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 64px;
 }
@@ -717,7 +716,10 @@ body {
   color: #030B59;
   border-radius: 24px 24px 0 0;
   border: none;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+}
+.program .activeA span {
+  color: #030B59;
 }
 .program .activeA:after {
   content: "";
@@ -817,7 +819,7 @@ body {
   margin: 68px 0 0 0;
 }
 .price-table {
-  padding: 40px 50px;
+  padding: 40px 30px;
 }
 .price-item {
   border-radius: 24px;
@@ -838,13 +840,13 @@ body {
   position: absolute;
 }
 .price-item .check-1 {
-  left: 360px;
+  left: 380px;
 }
 .price-item .check-2 {
-  right: 325px;
+  right: 345px;
 }
 .price-item .check-3 {
-  right: 70px;
+  right: 90px;
 }
 .price-item:nth-child(even) {
   background: transparent;
@@ -1029,6 +1031,9 @@ body {
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
+  .tuning .card:last-child {
+    display: flex;
+  }
   .tuning .card:nth-child(9)::after {
     display: none;
   }
@@ -1123,9 +1128,16 @@ body {
   .main .main-img-mob {
     display: block;
     position: absolute;
-    right: 0;
-    bottom: 20px;
+    left: 70px;
+    bottom: 50px;
     z-index: -100;
+    width: 100%;
+    height: auto;
+  }
+  .main .main-img-mob #MainImgMob {
+    display: block;
+    width: 100%;
+    height: auto;
   }
   .main .main-img-mob #MainTTIcon {
     position: absolute;

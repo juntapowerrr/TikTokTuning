@@ -518,6 +518,9 @@ body{
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
+        &:last-child{
+            display: none;
+        }
         p{  
             padding: 10px;
             color: $gray;
@@ -544,7 +547,7 @@ body{
         padding: 60px 0 100px 0;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
         gap: 64px;
         &-item{
@@ -654,7 +657,10 @@ body{
         color: $cta;
         border-radius: 24px 24px 0 0;
         border: none;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
+        span{
+            color: $cta;
+        }
     }
     
     .activeA:after {
@@ -756,7 +762,7 @@ body{
     }
 
     &-table{
-        padding: 40px 50px;
+        padding: 40px 30px;
     }
     &-item{
         border-radius: 24px;
@@ -775,13 +781,13 @@ body{
         .check{
             position: absolute;
             &-1{
-                left: 360px;
+                left: 380px;
             }
             &-2{
-                right: 325px;
+                right: 345px;
             }
             &-3{
-                right: 70px;
+                right: 90px;
             }
         }
         &:nth-child(even){
