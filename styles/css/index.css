@@ -1124,22 +1124,20 @@ body {
     display: block;
     position: absolute;
     right: 0;
-    bottom: 40px;
+    bottom: 20px;
     z-index: -100;
-    transform: rotate(9deg);
   }
   .main .main-img-mob #MainTTIcon {
     position: absolute;
-    bottom: 15px;
+    bottom: 50px;
     left: -100px;
-    transform: rotate(-20deg);
   }
   .main .main-img-mob #MainTTIcon2 {
     width: 43px;
     height: 44px;
     position: absolute;
-    top: 120px;
-    right: 10px;
+    top: 140px;
+    right: 0;
     transform: rotate(-6deg);
   }
 }
