@@ -391,8 +391,8 @@ body{
             bottom: -70px;
             img{
                 display: block;
-                width: 100px;
-                height: 100px;
+                max-width: 100%;
+                height: auto;
             }
             span{
                 color: #FFF;
@@ -419,7 +419,7 @@ body{
         }
         &-txt{
             color: $gray;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 500;
             line-height: 22px;
             max-width: 450px;
