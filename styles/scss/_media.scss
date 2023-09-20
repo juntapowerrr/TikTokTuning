@@ -123,6 +123,26 @@
                 line-height: 20px;
             }
         }
+        .why-tiktok{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+            //padding: 44px 0 44px 0;
+            padding: 0;
+            &-item{
+                flex: 1 0 100%;
+                h3{
+                    font-size: 44px;
+                }
+                span{
+                    font-size: 25px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
     }
 }
 @media (max-width: 1050px) {
@@ -131,6 +151,7 @@
             flex-direction: column;
         }
         &-left{
+            position: relative;
             .btns-info{
                 padding: 44px 0;
                 gap: 8px;
@@ -152,9 +173,6 @@
                 gap: 14px;
             }
         }
-        // &-right{
-
-        // }
     }
     .about{
         .title{
@@ -175,12 +193,53 @@
             line-height: 40px;
         }
     }
+    .program{
+        .title{
+            font-size: 30px;
+            line-height: 40px;
+        }
+        // .accordeon__button{
+            
+        // }
+    }
 }
-
 @media (max-width: 860px) {
     .price{
         &-box-mob{
             flex-direction: column;
+        }
+    }
+}
+@media (max-width: 500px){
+    .main{
+        overflow: hidden;
+        &-left{
+            padding: 0 0 220px 0;
+        }
+        &-right{
+            display: none;
+        }
+        .main-img-mob{
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 40px;
+            z-index: -100;
+            transform: rotate(9deg);
+            #MainTTIcon{
+                position: absolute;
+                bottom: 15px;
+                left: -100px;
+                transform: rotate(-20deg);
+            }
+            #MainTTIcon2{
+                width: 43px;
+                height: 44px;
+                position: absolute;
+                top: 120px;
+                right: 10px;
+                transform: rotate(-6deg);
+            }
         }
     }
 }

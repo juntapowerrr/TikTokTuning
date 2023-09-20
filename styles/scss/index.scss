@@ -279,13 +279,16 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        .img{
+        #MainImg{
             display: block;
             max-width: 100%;
             height: auto;
             margin: 30px 0 0 0;
             transform: rotate(4deg);
         }
+    }
+    .main-img-mob{
+        display: none;
     }
 }
 
@@ -593,27 +596,24 @@ body{
     .accordeon__button {
         position: relative;
         color: $gray;
-        padding: 5px 30px;
+        padding: 12px 55px 12px 12px;
         cursor: pointer;
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 34px;
+        font-size: 14px;
+        font-weight: 500;
+        //line-height: 34px;
         transition: all .5s ease;
-    
-        @media screen and (max-width: 450px) {
-            font-size: 14px;
-            transition: all .5s ease;
+        span{
+            color: rgba(207, 217, 225, 0.44);
         }
     }
     
     .accordeon__button:after {
         content: "";
         position: absolute;
-        display: block;
-        right: 30px;
+        right: 20px;
         bottom: 12px;
         border: 8px solid transparent;
         border-top: 14px solid #D9D9D9;
