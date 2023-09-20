@@ -27,16 +27,16 @@
                 <nav class="header__menu">
                     <ul class="header__list">
                         <li>
-                            <a href="#" class="header__link" id="HeaderLink1">Про курс</a>
+                            <a href="#SectionTuning" class="header__link" id="HeaderLink1">Про курс</a>
                         </li>
                         <li>
-                            <a href="#" class="header__link" id="HeaderLink1">Програма</a>
+                            <a href="#SectionProgram" class="header__link" id="HeaderLink2">Програма</a>
                         </li>
                         <li>
-                            <a href="#" class="header__link" id="HeaderLink1">Тарифи</a>
+                            <a href="#SectionPrice" class="header__link" id="HeaderLink3">Тарифи</a>
                         </li>
                     </ul>
-                    <a href="https://haq1o0swuzr.typeform.com/to/Zx3BqfsC" target="_blank" class="btn btn-cta" id="BtnCta1">Прийняти участь</a>
+                    <a href="#SectionPrice" class="btn btn-cta" id="BtnCta1">Прийняти участь</a>
                 </nav>
             </div>
         </div>
@@ -59,8 +59,8 @@
                      До зміни вартості залишилось 10 днів.
                 </p>
                 <div class="btns-cta">
-                    <a href="https://haq1o0swuzr.typeform.com/to/Zx3BqfsC" target="_blank" class="btn btn-cta" id="BtnCta2">Прийняти участь</a>
-                    <button class="btn btn-cta2" id="BtnCta3">Програма курсу</button>
+                    <a href="#SectionPrice" class="btn btn-cta" id="BtnCta2">Прийняти участь</a>
+                    <a href="#SectionProgram" class="btn btn-cta2" id="BtnCta3">Програма курсу</a>
                 </div>
             </div>
             <div class="main-right">
@@ -161,7 +161,7 @@
             </div>
         </div>
     </section>
-    <section class="tuning">
+    <section class="tuning" id="SectionTuning">
         <div class="container">
             <h2 class="title">Пicля тюнингу твого TikTok, ти:</h2>
             <div class="tuning-container">
@@ -231,7 +231,7 @@
             </ul>
         </div>
     </section>
-    <section class="program">
+    <section class="program" id="SectionProgram">
         <div class="container">
             <h2 class="title">Програма курсу:</h2>
             <ul class="accordeon">
@@ -403,7 +403,7 @@
             </ul>
         </div>
     </section>
-    <section class="price">
+    <section class="price" id="SectionPrice">
         <img class="price-bg1" src="./assets/svg/price-bg.svg" alt="">
         <img class="price-bg2" src="./assets/svg/price-bg.svg" alt="">
         <div class="container">
@@ -543,6 +543,7 @@
         ScrollReveal({ reset: true });
     </script>
     <script src="./js/animation.js"></script>
+    <script src="./js/jquery.fixedheaderscroll.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
