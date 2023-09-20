@@ -126,23 +126,31 @@
                 line-height: 20px;
             }
         }
+        .title{
+            line-height: 40px;
+        }
         .why-tiktok{
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            gap: 10px;
+            gap: 44px;
             //padding: 44px 0 44px 0;
             padding: 0;
+            margin: 22px 0 0 0;
             &-item{
                 flex: 1 0 100%;
                 h3{
                     font-size: 44px;
+                    line-height: 44px;
                 }
                 span{
                     font-size: 25px;
+                    line-height: 60px;
                 }
                 p{
                     font-size: 12px;
+                    line-height: 22px;
+                    margin: 0 0 0 0;
                 }
             }
         }
