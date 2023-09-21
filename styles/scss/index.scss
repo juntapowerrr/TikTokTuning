@@ -873,6 +873,39 @@ body{
                     margin: 65px 0 0 0;
                 }
             }
+            .details{
+                width: 100%;
+                p {
+                    cursor: pointer;
+                }
+                p i{
+                    margin: 0 0 3px 8px;
+                }
+                // &-content{
+                //     width: 100%;
+                // }
+                &-item{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 30px;
+                    padding: 13px 8px;
+                    border-radius: 12px;
+                    border: 0px solid #979797;
+                    background: #C4C5D6;
+                    p{
+                        color: $cta;
+                        font-size: 14px;
+                        font-weight: 400;
+                        letter-spacing: -0.25px;
+                        margin: 0;
+                    }
+                }
+                &-item:nth-child(even){
+                    background: transparent;
+                }
+            }
             .btn{
                 margin: 15px 0 0 0;
             }
@@ -923,4 +956,5 @@ body{
         }
     }
 }
+
 @import 'media';

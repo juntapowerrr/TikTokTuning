@@ -88,6 +88,21 @@ button {
   background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
 }
 
+.arrow {
+  border: solid #030B59;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.arrow-up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
 body {
   background-color: #000000;
 }
@@ -927,6 +942,36 @@ body {
   font-size: 16px;
   font-weight: 400;
   margin: 65px 0 0 0;
+}
+.price-box-mob__card .details {
+  width: 100%;
+}
+.price-box-mob__card .details p {
+  cursor: pointer;
+}
+.price-box-mob__card .details p i {
+  margin: 0 0 3px 8px;
+}
+.price-box-mob__card .details-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 13px 8px;
+  border-radius: 12px;
+  border: 0px solid #979797;
+  background: #C4C5D6;
+}
+.price-box-mob__card .details-item p {
+  color: #030B59;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  margin: 0;
+}
+.price-box-mob__card .details-item:nth-child(even) {
+  background: transparent;
 }
 .price-box-mob__card .btn {
   margin: 15px 0 0 0;
