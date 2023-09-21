@@ -608,12 +608,12 @@ body{
     .accordeon__button {
         position: relative;
         color: $gray;
-        padding: 12px 55px 12px 12px;
+        padding: 5px 0 5px 32px;
         cursor: pointer;
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 500;
         //line-height: 34px;
         transition: all .5s ease;
@@ -621,16 +621,22 @@ body{
             color: rgba(207, 217, 225, 0.44);
         }
     }
-    
+
     .accordeon__button:after {
-        content: "";
+        content: '+';
         position: absolute;
-        right: 20px;
-        bottom: 12px;
-        border: 8px solid transparent;
-        border-top: 14px solid #D9D9D9;
-        border-bottom: 1px solid transparent;
-        transition: border-bottom 0.5s ease, border-top 0.5s ease, bottom 0.5s ease;
+        margin: auto 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: 36px;
+        font-size: 30px;
+        font-weight: 300;
+        transition: content .3s ease-in;
+        // bottom: 12px;
+        // border: 8px solid transparent;
+        // border-top: 14px solid #D9D9D9;
+        // border-bottom: 1px solid transparent;
+        // transition: border-bottom 0.5s ease, border-top 0.5s ease, bottom 0.5s ease;
     }
     
     .accordeon__panel {
@@ -643,7 +649,7 @@ body{
     }
     
     .panel__text {
-        padding: 0 30px 5px 30px;
+        padding: 0 32px 5px 32px;
         width: 100%;
         transition: all .5s ease;
 
@@ -653,11 +659,6 @@ body{
             font-size: 15px;
             font-weight: 400;
             line-height: 34px;
-        }
-    
-        @media screen and (max-width: 500px) {
-            //padding: 10px;
-            font-size: 14px;
         }
     }
     
@@ -673,10 +674,15 @@ body{
     }
     
     .activeA:after {
-        content: '';
-        bottom: 15px;
-        border-top: 1px solid transparent;
-        border-bottom: 14px solid $cta;
+        content: "-";
+        position: absolute;
+        margin: auto 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: 41px;
+        font-size: 30px;
+        font-weight: 300;
+        transition: content .3s ease-out;
     }
 }
 

@@ -285,6 +285,30 @@
     }
 }
 @media (max-width: 860px) {
+    .program{
+        .accordeon__item {
+            margin: 0 0 8px 0;
+        }
+        .accordeon__button {
+            padding: 5px 65px 5px 12px;
+            font-size: 14px;
+        }
+        .accordeon__button::after {
+            right: 12px;
+        }
+        .activeA::after{
+            right: 17px;
+        }
+        .panel__text {
+            padding: 0 12px 5px 12px;
+            width: 100%;
+            transition: all .5s ease;
+    
+            p{
+                font-size: 14px;
+            }
+        }
+    }
     .price{
         &-box-mob{
             flex-direction: column;

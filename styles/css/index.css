@@ -677,12 +677,12 @@ body {
 .program .accordeon__button {
   position: relative;
   color: #CFD9E1;
-  padding: 12px 55px 12px 12px;
+  padding: 5px 0 5px 32px;
   cursor: pointer;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   transition: all 0.5s ease;
 }
@@ -690,14 +690,15 @@ body {
   color: rgba(207, 217, 225, 0.44);
 }
 .program .accordeon__button:after {
-  content: "";
+  content: "+";
   position: absolute;
-  right: 20px;
-  bottom: 12px;
-  border: 8px solid transparent;
-  border-top: 14px solid #D9D9D9;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.5s ease, border-top 0.5s ease, bottom 0.5s ease;
+  margin: auto 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 36px;
+  font-size: 30px;
+  font-weight: 300;
+  transition: content 0.3s ease-in;
 }
 .program .accordeon__panel {
   border-radius: 0 0 24px 24px;
@@ -707,7 +708,7 @@ body {
   background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
 }
 .program .panel__text {
-  padding: 0 30px 5px 30px;
+  padding: 0 32px 5px 32px;
   width: 100%;
   transition: all 0.5s ease;
 }
@@ -716,11 +717,6 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 34px;
-}
-@media screen and (max-width: 500px) {
-  .program .panel__text {
-    font-size: 14px;
-  }
 }
 .program .activeA {
   background: #D9D9D9;
@@ -732,10 +728,15 @@ body {
   color: #030B59;
 }
 .program .activeA:after {
-  content: "";
-  bottom: 15px;
-  border-top: 1px solid transparent;
-  border-bottom: 14px solid #030B59;
+  content: "-";
+  position: absolute;
+  margin: auto 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 41px;
+  font-size: 30px;
+  font-weight: 300;
+  transition: content 0.3s ease-out;
 }
 
 .price {
@@ -1229,6 +1230,27 @@ body {
   }
 }
 @media (max-width: 860px) {
+  .program .accordeon__item {
+    margin: 0 0 8px 0;
+  }
+  .program .accordeon__button {
+    padding: 5px 65px 5px 12px;
+    font-size: 14px;
+  }
+  .program .accordeon__button::after {
+    right: 12px;
+  }
+  .program .activeA::after {
+    right: 17px;
+  }
+  .program .panel__text {
+    padding: 0 12px 5px 12px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  .program .panel__text p {
+    font-size: 14px;
+  }
   .price-box-mob {
     flex-direction: column;
   }
