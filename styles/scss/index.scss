@@ -375,29 +375,38 @@ body{
             max-width: 1070px;
             @include bg-linear-silver;
             //padding: 20px;
+            display: block;
+            position: relative;
+            padding: 30px;
             &::before{
-                content: '“';
+                content: url(../../assets/svg/quote-paws-1.svg);
+                position: absolute;
+                top: 0;
+                left: 0;
             }
             &::after{
-                content: '”';
+                content: url(../../assets/svg/quote-paws-2.svg);
+                position: absolute;
+                bottom: 0;
+                right: 370px;
             }
         }
         &-author{
             display: flex;
             align-items: center;
-            gap: 24px;
             position: absolute;
-            right: 200px;
-            bottom: -70px;
+            right: -20px;
+            top: 30px;
             img{
                 display: block;
-                width: 100px;
+                max-width: 335px;
                 height: auto;
             }
             span{
                 color: #FFF;
                 font-size: 17px;
                 font-weight: 500;
+                margin: 150px 0 0 0;
             }
         }
     }
@@ -865,4 +874,47 @@ body{
     }
 }
 
+.footer{
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        border-top: 1px solid #fff;
+        padding: 38px;
+    }
+    &-title-1{
+        color: #FFF;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+    &-title-2{
+        color: #FFF;
+        font-weight: 200;
+        font-size: 13px;
+        letter-spacing: 5.5px;
+        margin: 0 0 0 5px;
+    }
+    &-menu{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 30px;
+        &-items{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        // &-item{
+            
+        // }
+        &-link{
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+}
 @import 'media';

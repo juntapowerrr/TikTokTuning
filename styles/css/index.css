@@ -446,30 +446,39 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: block;
+  position: relative;
+  padding: 30px;
 }
 .about .quote-txt::before {
-  content: "“";
+  content: url(../../assets/svg/quote-paws-1.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .about .quote-txt::after {
-  content: "”";
+  content: url(../../assets/svg/quote-paws-2.svg);
+  position: absolute;
+  bottom: 0;
+  right: 370px;
 }
 .about .quote-author {
   display: flex;
   align-items: center;
-  gap: 24px;
   position: absolute;
-  right: 200px;
-  bottom: -70px;
+  right: -20px;
+  top: 30px;
 }
 .about .quote-author img {
   display: block;
-  width: 100px;
+  max-width: 335px;
   height: auto;
 }
 .about .quote-author span {
   color: #FFF;
   font-size: 17px;
   font-weight: 500;
+  margin: 150px 0 0 0;
 }
 .about .story {
   margin: 150px 0 0 0;
@@ -922,6 +931,45 @@ body {
   margin: 15px 0 0 0;
 }
 
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #fff;
+  padding: 38px;
+}
+.footer-title-1 {
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.footer-title-2 {
+  color: #FFF;
+  font-weight: 200;
+  font-size: 13px;
+  letter-spacing: 5.5px;
+  margin: 0 0 0 5px;
+}
+.footer-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+}
+.footer-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.footer-menu-link {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 @media (max-width: 1255px) {
   .about .cards {
     flex-direction: column;
@@ -935,15 +983,27 @@ body {
     padding: 0;
     margin: 44px 0 0 0;
   }
+  .about .quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
   .about .quote-txt {
     font-size: 30px;
     line-height: 40px;
     letter-spacing: -1px;
+    max-width: 310px;
+    padding: 50px 0 0 0;
+  }
+  .about .quote-txt::after {
+    right: 100px;
+    bottom: -45px;
   }
   .about .quote-author {
     position: static;
     padding: 24px 0;
-    gap: 12px;
     justify-content: center;
   }
   .about .quote span {
@@ -1120,6 +1180,52 @@ body {
   }
   .light-1, .light-2, .light-3, .light-4, .light-5, .light-6 {
     display: none;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  .footer-menu {
+    flex-direction: column;
+    gap: 0;
+    margin: 10px 0 0 0;
+  }
+  .footer-menu-items {
+    margin: 20px 0 0 0;
+  }
+}
+@media (max-width: 900px) {
+  .about .quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+    overflow: hidden;
+  }
+  .about .quote-txt {
+    max-width: 310px;
+  }
+  .about .quote-txt::after {
+    right: 130px;
+    bottom: -45px;
+  }
+  .about .quote-author {
+    padding: 0;
+    position: relative;
+    right: -30px;
+    top: -90px;
+    width: 100%;
+    margin: 0 0 -90px 0;
+  }
+  .about .quote-author img {
+    max-width: 155px;
+  }
+  .about .quote-author span {
+    margin: 120px 0 0 -55px;
   }
 }
 @media (max-width: 860px) {

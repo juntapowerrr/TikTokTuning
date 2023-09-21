@@ -13,15 +13,28 @@
             margin: 44px 0 0 0;
         }
         .quote{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
             &-txt{
                 font-size: 30px;
                 line-height: 40px;
                 letter-spacing: -1px;
+                max-width: 310px;
+                padding: 50px 0 0 0;
+                &::before{
+                    
+                }
+                &::after{
+                    right: 100px;
+                    bottom: -45px;
+                }
             }
             &-author{
                 position: static;
                 padding: 24px 0;
-                gap: 12px;
                 justify-content: center;
             }
             span{
@@ -215,6 +228,60 @@
     }
     .light-1, .light-2, .light-3, .light-4, .light-5, .light-6 {
         display: none;
+    }
+    .footer{
+        &-wrapper{
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+        &-menu{
+            flex-direction: column;
+            gap: 0;
+            margin: 10px 0 0 0;
+            &-items{
+                margin: 20px 0 0 0;
+            }
+        }
+    }
+}
+@media (max-width: 900px) {
+    .about{
+        .quote{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            gap: 0;
+            //height: 100%;
+            overflow: hidden;
+            &-txt{
+                max-width: 310px;
+                // &::before{
+                    
+                // }
+                &::after{
+                    right: 130px;
+                    bottom: -45px;
+                }
+            }
+            &-author{
+                padding: 0;
+                position: relative;
+                right: -30px;
+                top: -90px;
+                width: 100%;
+                margin: 0 0 -90px 0;
+                img{
+                    max-width: 155px;
+                }
+                span{
+                    margin: 120px 0 0 -55px;
+                }
+            }
+        }
     }
 }
 @media (max-width: 860px) {
