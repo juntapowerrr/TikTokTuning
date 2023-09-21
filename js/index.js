@@ -8,6 +8,8 @@ $(document).ready(function() {
             opacity: 0.5,
         })
     });
+
+    $(".details-content").hide();
     $(".details-btn").click(function(){
         $(".details-content").fadeToggle(500);
     });
