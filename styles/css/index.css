@@ -119,9 +119,9 @@ button {
 }
 
 .background span {
-  width: 50vmin;
-  height: 50vmin;
-  border-radius: 50vmin;
+  width: 75vmin;
+  height: 75vmin;
+  border-radius: 75vmin;
   backface-visibility: hidden;
   position: absolute;
   animation: move;
@@ -1089,6 +1089,7 @@ body {
 .program .panel__text {
   padding: 16px 22px 25px 12px;
   width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
 }
 .program .panel__text-item {
@@ -1375,7 +1376,7 @@ body {
   -webkit-text-fill-color: var(--Gray, #CFD9E1);
 }
 .price-box-mob > .price-box-mob__card:nth-child(2) .details-btn .arrow {
-  border: solid #CFD9E1;
+  border-color: #CFD9E1;
 }
 .price-box-mob > .price-box-mob__card:nth-child(2) .details-item p {
   -webkit-text-fill-color: var(--Gray, #CFD9E1);

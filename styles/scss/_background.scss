@@ -18,9 +18,9 @@ $color: linear-gradient(90deg, rgba(3, 11, 89, 0.80) 0%, rgba(0, 22, 149, 0.80) 
 }
 
 .background span {
-    width: 50vmin;
-    height: 50vmin;
-    border-radius: 50vmin;
+    width: 75vmin;
+    height: 75vmin;
+    border-radius: 75vmin;
     backface-visibility: hidden;
     position: absolute;
     animation: move;

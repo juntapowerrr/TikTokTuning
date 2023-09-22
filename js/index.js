@@ -10,7 +10,13 @@ $(document).ready(function() {
     });
 
     $(".details-content").hide();
-    $(".details-btn").click(function(){
-        $(".details-content").fadeToggle(500);
+    $("#DetailsBtn1").click(function(){
+        $("#DetailsContent1").fadeToggle(300);
+    });
+    $("#DetailsBtn2").click(function(){
+        $("#DetailsContent2").fadeToggle(300);
+    });
+    $("#DetailsBtn3").click(function(){
+        $("#DetailsContent3").fadeToggle(300);
     });
 });
