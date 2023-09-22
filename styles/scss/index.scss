@@ -1087,7 +1087,7 @@ body{
             text-align: left;
             width: 100%;
             padding: 10px 50px 10px 0;
-            //border: none;
+            border: none;
             outline: none;
             //border: 1px solid yellow;
             font-size: 17px;
@@ -1153,7 +1153,7 @@ body{
           }
           + .accordion-content {
             opacity: 1;
-            max-height: 9em;
+            max-height: 100%;
             transition: all 300ms linear;
             will-change: opacity, max-height;
           }

@@ -1481,6 +1481,7 @@ body {
   text-align: left;
   width: 100%;
   padding: 10px 50px 10px 0;
+  border: none;
   outline: none;
   font-size: 17px;
   font-weight: 700;
@@ -1536,7 +1537,7 @@ body {
 }
 .faq .accordion button[aria-expanded=true] + .accordion-content {
   opacity: 1;
-  max-height: 9em;
+  max-height: 100%;
   transition: all 300ms linear;
   will-change: opacity, max-height;
 }
@@ -1817,6 +1818,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
+    padding: 20px;
   }
   .footer-menu {
     flex-direction: column;
