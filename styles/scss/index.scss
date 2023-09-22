@@ -1,10 +1,12 @@
 @import 'reset';
 @import 'var';
 @import 'common';
+@import 'background';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{
     background-color: #000000;
+    position: relative;
 }
 
 .header{
@@ -87,77 +89,94 @@ body{
         @media (max-width: 767px) {
             display: block;
             position: relative;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 1px solid #fff;
+            width: 44px;
+            height: 44px;
             position: relative;
             z-index: 3;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.01);
+            box-shadow: 0px 4px 10px 0px rgba(93, 177, 223, 0.10);
+            padding: 10px;
+            span{
+                position: absolute;
+                background-color: #fff;
+                width: 24px;
+                height: 2px;
+                left: 10px;
+                top: 21px;
+            }
             &::before, &::after{
                 content: '';
                 background-color: #fff;
                 position: absolute;
-                width: 12px;
+                width: 24px;
                 height: 2px;
-                left: 0;
+                left: 10px;
                 transition: all .3s ease 0s;
             }
 
             &::before{
-                top: 16px;
-                left: 16px;
+                // top: 16px;
+                // left: 16px;
+                top: 13px;
             }
 
             &::after{
-                bottom: 16px;
-                left: 16px;
+                // bottom: 16px;
+                // left: 16px;
+                bottom: 13px;
             }
 
             &.active::before{
-                width: 12px;
+                width: 24px;
                 transform: rotate(45deg);
                 top: 21px;
-                left: 16px;
+                left: 10px;
             }
             &.active::after{
-                width: 12px;
+                width: 24px;
                 transform: rotate(-45deg);
-                bottom: 20px;
-                left: 16px;
+                bottom: 21px;
+                left: 10px;
+            }
+            &.active span{
+                transform: scale(0);
             }
         }
-        @media (max-width: 375px) {
-            width: 30px;
-            height: 30px;
-            &::before, &::after{
-                content: '';
-                width: 10px;
-            }
+        // @media (max-width: 375px) {
+        //     width: 30px;
+        //     height: 30px;
+        //     &::before, &::after{
+        //         content: '';
+        //         width: 10px;
+        //     }
 
-            &::before{
-                top: 16px;
-                left: 9px;
-            }
+        //     &::before{
+        //         top: 16px;
+        //         left: 9px;
+        //     }
 
-            &::after{
-                bottom: 16px;
-                left: 9px;
-            }
+        //     &::after{
+        //         bottom: 16px;
+        //         left: 9px;
+        //     }
 
-            &.active::before{
-                top: 13px;
-                left: 8px;
-            }
-            &.active::after{
-                bottom: 13px;
-                left: 8px;
-            }
-        }
+        //     &.active::before{
+        //         top: 13px;
+        //         left: 8px;
+        //     }
+        //     &.active::after{
+        //         bottom: 13px;
+        //         left: 8px;
+        //     }
+        // }
     }
     &__menu{
         display: flex;
         align-items: center;
         @media (max-width: 767px){
+            align-items: flex-start;
+            justify-content: space-between;
             flex-direction: column;
             position: fixed;
             top: -100%;
@@ -166,16 +185,18 @@ body{
             height: 100%;
             transition: all .3s ease 0s;
             background-color: rgba($color: $cta, $alpha: 1);
-            padding: 90px 15px 20px 15px;
+            opacity: 1;
+            background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.95) 89.23%));
+            padding: 114px 20px 44px 20px;
             &.active{
                 top: 0;
             }
         }
         @media (max-width: 375px){
-            padding: 70px 15px 20px 15px;
-            &.active{
-                top: 0;
-            }
+            //padding: 70px 15px 20px 15px;
+            // &.active{
+            //     top: 0;
+            // }
         }
     }
     &__list{
@@ -185,7 +206,7 @@ body{
         li{
             margin: 0 24px 0 0;
             @media (max-width: 767px){
-                margin: 20px 0;
+                margin: 0 0 24px 0;
                 // &:first-child{
                 //     margin: 0 0 20px 0;
                 // }
@@ -344,7 +365,7 @@ body{
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-        padding: 4px 10px;
+        padding: 4.5px 8px;
         white-space: nowrap;
         &-txt{
             color: $gray;
@@ -599,26 +620,35 @@ body{
     }
     
     .accordeon__item {
-        color: $gray;
-        margin: 0 0 10px 0;
-        border-radius: 24px;
+        //color: $gray;
+        margin: 0 0 4px 0;
+        border-radius: 12px;
+        //border: 1px solid rgba(255, 255, 255, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.15);
     }
     
     .accordeon__button {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
         position: relative;
         color: $gray;
-        padding: 5px 0 5px 32px;
+        padding: 12px 16px 12px 12px;
         cursor: pointer;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        //border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-        font-size: 20px;
-        font-weight: 500;
-        //line-height: 34px;
-        transition: all .5s ease;
-        span{
-            color: rgba(207, 217, 225, 0.44);
+        //transition: all .3s ease-in;
+        span:nth-child(1){
+            color: var(--Gray, #CFD9E1);
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0.44;
+        }
+        span:last-child{
+            color: var(--Gray, #CFD9E1);
+            font-size: 13px;
+            font-weight: 500;
         }
     }
 
@@ -626,11 +656,12 @@ body{
         content: '+';
         position: absolute;
         margin: auto 0;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        right: 36px;
+        //top: 50%;
+        //transform: translate(-50%, -50%);
+        right: 16px;
         font-size: 30px;
         font-weight: 300;
+        width: 12px;
         transition: content .3s ease-in;
         // bottom: 12px;
         // border: 8px solid transparent;
@@ -640,49 +671,60 @@ body{
     }
     
     .accordeon__panel {
-        border-radius: 0 0 24px 24px;
+        //border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 0 0 12px 12px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.5s ease;
-        //background: #D9D9D9;
+        transition: all .3s ease;
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
     }
     
     .panel__text {
-        padding: 0 32px 5px 32px;
+        padding: 16px 22px 25px 12px;
         width: 100%;
-        transition: all .5s ease;
-
-        p{
-            //color: $cta;
-            color: $gray;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 34px;
+        transition: all .3s ease;
+        &-item{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            gap: 5px;
+            span{
+                color: var(--Gray, #CFD9E1);
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 34px;
+                opacity: 0.44;
+                width: 50px;
+            }
+            p{
+                color: var(--Gray, #CFD9E1);
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 34px;
+            }
         }
     }
     
     .activeA {
-        background: #D9D9D9;
-        color: $cta;
-        border-radius: 24px 24px 0 0;
+        //background: #D9D9D9;
+        //color: $cta;
+        border-radius: 12px 12px 0 0;
         //border: none;
         transition: all 0.3s ease;
-        span{
-            color: $cta;
-        }
     }
     
     .activeA:after {
         content: "-";
         position: absolute;
         margin: auto 0;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        right: 41px;
+        //top: 50%;
+        //transform: translate(-50%, -50%);
+        right: 14px;
         font-size: 30px;
         font-weight: 300;
         transition: content .3s ease-out;
+        width: 12px;
     }
 }
 
@@ -701,7 +743,7 @@ body{
         bottom: -50px;
         left: -50px;
         z-index: -333;
-        transform: scale(-1, 1)
+        transform: scale(-1, 1);
     }
     .title{
         font-size: 44px;
@@ -717,7 +759,7 @@ body{
         font-weight: 400;
         line-height: 30px;
         margin: 10px 0 80px 0;
-        max-width: 380px;
+        //max-width: 292px;
     }
 
     &-box{
@@ -823,91 +865,126 @@ body{
         justify-content: center;
         align-items: center;
         gap: 8px;
-        &__card{
-            //margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            max-width: 335px;
-            padding: 25px;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            background: var(--white-linear-silver,
-             linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
-            &:nth-child(even){
-                background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
-                h3, .txt-price{
-                    @include bg-linear-silver;
-                }
-                p{
-                    color: $gray;
-                }
-                .about-course{
-                    color: $gray;
-                }
-                
-            }
-            h3{
-                color: $cta;
+    }
+    &-box-mob__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 335px;
+        padding: 25px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: var(--Gray, #CFD9E1);
+        &-title{
+            color: $cta;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.333px;
+            text-transform: uppercase;
+        }
+        &-txt{
+            color: $cta;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.233px;
+            margin: 10px 0 0 0;
+        }
+        &-price{
+            color: $cta;
+            font-size: 36px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            margin: 42px 0 0 0;
+            &::after{
+                content: '$376';
+                margin: 0 0 0 10px;
+                color: rgba(3, 11, 89, 0.50);
                 font-size: 18px;
-                font-weight: 700;
-                letter-spacing: -0.333px;
-            }
-            p{
-                color: $cta;
-                font-size: 14px;
-                font-weight: 400;
-                letter-spacing: -0.233px;
-                margin: 10px 0;
-            }
-            span{
-                color: $cta;
-                font-size: 36px;
                 font-weight: 500;
                 letter-spacing: -1px;
-                &:nth-last-child(2){
-                    color: $cta;
-                    font-size: 16px;
-                    font-weight: 400;
-                    margin: 65px 0 0 0;
-                }
+                text-decoration: line-through;
             }
-            .details{
+        }
+        .details{
+            width: 100%;
+            margin: 32px 0 0 0;
+            p {
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 400;
+                background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            p i{
+                margin: 0 0 3px 8px;
+            }
+            &-content{
+               margin: 16px 0 0 0;
+            }
+            &-item{
                 width: 100%;
-                p {
-                    cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                //gap: 30px;
+                padding: 13.5px;
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                background: #C4C5D6;
+                p{
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
-                p i{
-                    margin: 0 0 3px 8px;
-                }
-                // &-content{
-                //     width: 100%;
-                // }
-                &-item{
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 30px;
-                    padding: 13px 8px;
-                    border-radius: 12px;
-                    border: 0px solid #979797;
-                    background: #C4C5D6;
-                    p{
-                        color: $cta;
-                        font-size: 14px;
-                        font-weight: 400;
-                        letter-spacing: -0.25px;
-                        margin: 0;
-                    }
-                }
-                &-item:nth-child(even){
-                    background: transparent;
+                img{
+                    width: 20px;
+                    height: 20px;
                 }
             }
-            .btn{
-                margin: 15px 0 0 0;
+            &-item:nth-child(even){
+                background: transparent;
+            }
+        }
+        .btn{
+            margin: 15px 0 0 0;
+        }
+    }
+    &-box-mob__card:nth-child(odd){
+        background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
+        &-title{
+            background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &-txt{
+            color: $cta;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.233px;
+            margin: 10px 0 0 0;
+        }
+        &-price{
+            color: $cta;
+            font-size: 36px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            margin: 42px 0 0 0;
+            &::after{
+                content: '$376';
+                margin: 0 0 0 10px;
+                color: rgba(3, 11, 89, 0.50);
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: -1px;
+                text-decoration: line-through;
             }
         }
     }

@@ -24,9 +24,9 @@
                 letter-spacing: -1px;
                 max-width: 310px;
                 padding: 50px 0 0 0;
-                &::before{
+                // &::before{
                     
-                }
+                // }
                 &::after{
                     right: 100px;
                     bottom: -45px;
@@ -74,9 +74,10 @@
             line-height: 40px;
         }
         .txt{
-            display: none;
+            font-size: 14px;
+            line-height: 22px;
+            margin: 10px 0 0 0;
         }
-
         .price-box{
             display: none;
         }
@@ -112,13 +113,13 @@
             height: 166px;
             position: relative;
             &:nth-child(odd)::after{
-                content: url(../../assets/svg/magister-logo.svg);
+                content: url(../../assets/svg/check-circle.svg);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 44px;
                 height: 44px;
-                background: $cta;
+                background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));;
                 position: absolute;
                 bottom: -26px;
                 right: -26px;
@@ -285,30 +286,30 @@
     }
 }
 @media (max-width: 860px) {
-    .program{
-        .accordeon__item {
-            margin: 0 0 8px 0;
-        }
-        .accordeon__button {
-            padding: 5px 65px 5px 12px;
-            font-size: 14px;
-        }
-        .accordeon__button::after {
-            right: 12px;
-        }
-        .activeA::after{
-            right: 17px;
-        }
-        .panel__text {
-            padding: 0 12px 5px 12px;
-            width: 100%;
-            transition: all .5s ease;
+    // .program{
+    //     .accordeon__item {
+    //         margin: 0 0 8px 0;
+    //     }
+    //     .accordeon__button {
+    //         padding: 5px 65px 5px 12px;
+    //         font-size: 14px;
+    //     }
+    //     .accordeon__button::after {
+    //         right: 12px;
+    //     }
+    //     .activeA::after{
+    //         right: 17px;
+    //     }
+    //     .panel__text {
+    //         padding: 0 12px 5px 12px;
+    //         width: 100%;
+    //         transition: all .5s ease;
     
-            p{
-                font-size: 14px;
-            }
-        }
-    }
+    //         p{
+    //             font-size: 14px;
+    //         }
+    //     }
+    // }
     .price{
         &-box-mob{
             flex-direction: column;
