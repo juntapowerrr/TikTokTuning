@@ -909,7 +909,7 @@ body{
         .details{
             width: 100%;
             margin: 32px 0 0 0;
-            p {
+            &-btn {
                 cursor: pointer;
                 font-size: 16px;
                 font-weight: 400;
@@ -918,7 +918,7 @@ body{
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-            p i{
+            &-btn i{
                 margin: 0 0 3px 8px;
             }
             &-content{
@@ -932,7 +932,7 @@ body{
                 //gap: 30px;
                 padding: 13.5px;
                 border-radius: 12px;
-                border: 1px solid rgba(255, 255, 255, 0.15);
+                //border: 1px solid rgba(255, 255, 255, 0.15);
                 background: #C4C5D6;
                 p{
                     font-size: 13px;
@@ -956,35 +956,42 @@ body{
             margin: 15px 0 0 0;
         }
     }
-    &-box-mob__card:nth-child(odd){
+    &-box-mob > .price-box-mob__card:nth-child(2){
         background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
-        &-title{
+        .price-box-mob__card-title{
+            color: none;
             background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        &-txt{
-            color: $cta;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: -0.233px;
-            margin: 10px 0 0 0;
+        .price-box-mob__card-txt{
+            color: var(--new-gray, #808197);
         }
-        &-price{
-            color: $cta;
-            font-size: 36px;
-            font-weight: 500;
-            letter-spacing: -1px;
-            margin: 42px 0 0 0;
+        .price-box-mob__card-price{
+            color: var(--Gray, #CFD9E1);
             &::after{
-                content: '$376';
-                margin: 0 0 0 10px;
-                color: rgba(3, 11, 89, 0.50);
-                font-size: 18px;
-                font-weight: 500;
-                letter-spacing: -1px;
-                text-decoration: line-through;
+                color: var(--new-gray, #808197);
+            }
+        }
+        .details{
+            &-btn{
+                -webkit-text-fill-color: var(--Gray, #CFD9E1);
+                .arrow{
+                    border: solid $gray;
+                }
+                //color: var(--Gray, #CFD9E1);
+            }
+            &-content{
+                
+            }
+            &-item{
+                p{
+                    -webkit-text-fill-color: var(--Gray, #CFD9E1);
+                }
+                &:nth-child(odd){
+                    background: rgba($color: #808197, $alpha: 0.22);
+                }
             }
         }
     }

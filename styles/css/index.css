@@ -1309,7 +1309,7 @@ body {
   width: 100%;
   margin: 32px 0 0 0;
 }
-.price-box-mob__card .details p {
+.price-box-mob__card .details-btn {
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
@@ -1318,7 +1318,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.price-box-mob__card .details p i {
+.price-box-mob__card .details-btn i {
   margin: 0 0 3px 8px;
 }
 .price-box-mob__card .details-content {
@@ -1331,7 +1331,6 @@ body {
   align-items: center;
   padding: 13.5px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
   background: #C4C5D6;
 }
 .price-box-mob__card .details-item p {
@@ -1353,37 +1352,36 @@ body {
 .price-box-mob__card .btn {
   margin: 15px 0 0 0;
 }
-.price-box-mob__card:n {
+.price-box-mob > .price-box-mob__card:nth-child(2) {
   background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
 }
-.price-box-mob__card:n-title {
+.price-box-mob > .price-box-mob__card:nth-child(2) .price-box-mob__card-title {
+  color: none;
   background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.price-box-mob__card:n-txt {
-  color: #030B59;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: -0.233px;
-  margin: 10px 0 0 0;
+.price-box-mob > .price-box-mob__card:nth-child(2) .price-box-mob__card-txt {
+  color: var(--new-gray, #808197);
 }
-.price-box-mob__card:n-price {
-  color: #030B59;
-  font-size: 36px;
-  font-weight: 500;
-  letter-spacing: -1px;
-  margin: 42px 0 0 0;
+.price-box-mob > .price-box-mob__card:nth-child(2) .price-box-mob__card-price {
+  color: var(--Gray, #CFD9E1);
 }
-.price-box-mob__card:n-price::after {
-  content: "$376";
-  margin: 0 0 0 10px;
-  color: rgba(3, 11, 89, 0.5);
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -1px;
-  text-decoration: line-through;
+.price-box-mob > .price-box-mob__card:nth-child(2) .price-box-mob__card-price::after {
+  color: var(--new-gray, #808197);
+}
+.price-box-mob > .price-box-mob__card:nth-child(2) .details-btn {
+  -webkit-text-fill-color: var(--Gray, #CFD9E1);
+}
+.price-box-mob > .price-box-mob__card:nth-child(2) .details-btn .arrow {
+  border: solid #CFD9E1;
+}
+.price-box-mob > .price-box-mob__card:nth-child(2) .details-item p {
+  -webkit-text-fill-color: var(--Gray, #CFD9E1);
+}
+.price-box-mob > .price-box-mob__card:nth-child(2) .details-item:nth-child(odd) {
+  background: rgba(128, 129, 151, 0.22);
 }
 
 .footer-wrapper {
