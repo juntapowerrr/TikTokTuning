@@ -1196,13 +1196,6 @@ body {
   right: -55px;
   z-index: -333;
 }
-.price-bg2 {
-  position: absolute;
-  bottom: -50px;
-  left: -50px;
-  z-index: -333;
-  transform: scale(-1, 1);
-}
 .price .title {
   font-size: 44px;
   font-weight: 700;
@@ -1440,6 +1433,131 @@ body {
 }
 .price-box-mob > .price-box-mob__card:nth-child(2) .details-item:nth-child(odd) {
   background: rgba(128, 129, 151, 0.22);
+}
+
+.faq {
+  padding: 100px 0;
+}
+@media (max-width: 1050px) {
+  .faq {
+    padding: 10px 0;
+  }
+}
+.faq .title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -1px;
+  background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.faq .container-accordion {
+  margin: 0 auto;
+  width: 100%;
+}
+.faq .accordion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px 160px;
+}
+@media (max-width: 1150px) {
+  .faq .accordion {
+    gap: 10px;
+  }
+}
+.faq .accordion .accordion-item {
+  flex: 1 0 40%;
+}
+@media (max-width: 1150px) {
+  .faq .accordion .accordion-item {
+    flex: 1 0 100%;
+  }
+}
+.faq .accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 10px 50px 10px 0;
+  outline: none;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}
+@media (max-width: 1150px) {
+  .faq .accordion button {
+    font-size: 14px;
+  }
+}
+.faq .accordion button:hover, .faq .accordion button:focus {
+  cursor: pointer;
+}
+.faq .accordion button:hover::after, .faq .accordion button:focus::after {
+  cursor: pointer;
+}
+.faq .accordion button .accordion-title {
+  background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.faq .accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  right: 5px;
+  width: 22px;
+  height: 22px;
+}
+.faq .accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: #fff;
+}
+.faq .accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: #fff;
+}
+.faq .accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.faq .accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 300ms linear;
+  will-change: opacity, max-height;
+}
+.faq .accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.faq .accordion .accordion-content p {
+  color: var(--Gray, #CFD9E1);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  padding: 0 50px 0 0;
+}
+@media (max-width: 1150px) {
+  .faq .accordion .accordion-content p {
+    font-size: 12px;
+  }
 }
 
 .footer-wrapper {
