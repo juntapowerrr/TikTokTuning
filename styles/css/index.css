@@ -121,7 +121,7 @@ button {
 .background span {
   width: 80vmin;
   height: 80vmin;
-  border-radius: 80vmin;
+  border-radius: 50vmin;
   backface-visibility: hidden;
   position: absolute;
   animation: move;
@@ -1103,7 +1103,7 @@ body {
   color: var(--Gray, #CFD9E1);
   font-size: 12px;
   font-weight: 500;
-  line-height: 34px;
+  line-height: 22px;
   opacity: 0.44;
   flex: 46px 0 0;
 }
@@ -1111,7 +1111,7 @@ body {
   color: var(--Gray, #CFD9E1);
   font-size: 12px;
   font-weight: 500;
-  line-height: 34px;
+  line-height: 22px;
 }
 .program .activeA {
   border-radius: 12px 12px 0 0;
