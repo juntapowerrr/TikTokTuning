@@ -191,6 +191,9 @@ body{
             &.active{
                 top: 0;
             }
+            &-txt{
+                display: block;
+            }
         }
         @media (max-width: 375px){
             //padding: 70px 15px 20px 15px;
@@ -229,6 +232,7 @@ body{
         }
         @media (max-width: 767px){
             display: block;
+            flex: 1 0 auto;
             li:nth-child(1){
                 display: none;
             }
@@ -260,17 +264,20 @@ body{
         font-size: 16px;
         @include bg-linear-silver;
     }
-    .cta-wrapper{
-        &-txt{
-            color: var(--Gray, #CFD9E1);
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 22px;
+    .cta-txt{
+        color: var(--Gray, #CFD9E1);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        display: none;
+        @media (max-width: 767px){
+            display: block;
+            padding: 0 0 14px 0;
         }
     }
     .btn{
         z-index: 3;
-        margin: 14px 0 0 0;
+        //margin: 14px 0 0 0;
     }
 }
 

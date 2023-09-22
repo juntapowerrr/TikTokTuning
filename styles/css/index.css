@@ -611,6 +611,9 @@ body {
   .header__menu.active {
     top: 0;
   }
+  .header__menu-txt {
+    display: block;
+  }
 }
 .header__list {
   display: flex;
@@ -643,6 +646,7 @@ body {
 @media (max-width: 767px) {
   .header__list {
     display: block;
+    flex: 1 0 auto;
   }
   .header__list li:nth-child(1) {
     display: none;
@@ -677,15 +681,21 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.header .cta-wrapper-txt {
+.header .cta-txt {
   color: var(--Gray, #CFD9E1);
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
+  display: none;
+}
+@media (max-width: 767px) {
+  .header .cta-txt {
+    display: block;
+    padding: 0 0 14px 0;
+  }
 }
 .header .btn {
   z-index: 3;
-  margin: 14px 0 0 0;
 }
 
 .main {
