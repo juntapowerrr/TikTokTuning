@@ -3,7 +3,7 @@
     $.fn.fixedHeaderScroll = function(options) {
 
         var settings = $.extend({
-            'headerSelector': 'header', // You need to designate the header element in your website.
+            'headerSelector': '.header', // You need to designate the header element in your website.
             'offset': 0, // You can offset the scroll position.
             'smooth': true, // You can choose if you use smooth scroll or not.
             'smoothDuration': 300, // Scroll speed. (in ms)
