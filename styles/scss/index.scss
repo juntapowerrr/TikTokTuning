@@ -981,9 +981,32 @@ body{
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                display: relative;
             }
-            &-btn i{
+            .arrow{
+                border: solid $cta;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 3px;
+                transition: all .3s ease;
+                // &-up{
+                //     transform: rotate(-135deg);
+                //     -webkit-transform: rotate(-135deg);
+                // }
+                &-down{
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+                &.active-arrow{
+                    transform: rotate(-135deg);
+                    -webkit-transform: rotate(-135deg);
+                }
+            }
+            &-btn .arrow-down{
                 margin: 0 0 3px 8px;
+            }
+            &-btn .active-arrow{
+                margin: 0 0 0 8px;
             }
             &-content{
                margin: 16px 0 0 0;

@@ -88,21 +88,6 @@ button {
   background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
 }
 
-.arrow {
-  border: solid #030B59;
-  border-width: 0 1px 1px 0;
-  display: inline-block;
-  padding: 3px;
-}
-.arrow-up {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
-.arrow-down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -1376,9 +1361,28 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: relative;
 }
-.price-box-mob__card .details-btn i {
+.price-box-mob__card .details .arrow {
+  border: solid #030B59;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: all 0.3s ease;
+}
+.price-box-mob__card .details .arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.price-box-mob__card .details .arrow.active-arrow {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.price-box-mob__card .details-btn .arrow-down {
   margin: 0 0 3px 8px;
+}
+.price-box-mob__card .details-btn .active-arrow {
+  margin: 0 0 0 8px;
 }
 .price-box-mob__card .details-content {
   margin: 16px 0 0 0;

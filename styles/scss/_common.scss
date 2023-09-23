@@ -41,21 +41,6 @@
     }
 }
 
-.arrow{
-    border: solid $cta;
-    border-width: 0 1px 1px 0;
-    display: inline-block;
-    padding: 3px;
-    &-up{
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-    }
-    &-down{
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-    }
-}
-
 @mixin bg-linear-silver{
     background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
     background-clip: text;

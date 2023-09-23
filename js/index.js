@@ -20,12 +20,15 @@ $(document).ready(function() {
 
     $(".details-content").hide();
     $("#DetailsBtn1").click(function(){
+        $(".arrow").toggleClass("active-arrow");
         $("#DetailsContent1").fadeToggle(300);
     });
     $("#DetailsBtn2").click(function(){
+        $(".arrow").toggleClass("active-arrow");
         $("#DetailsContent2").fadeToggle(300);
     });
     $("#DetailsBtn3").click(function(){
+        $(".arrow").toggleClass("active-arrow");
         $("#DetailsContent3").fadeToggle(300);
     });
 });
