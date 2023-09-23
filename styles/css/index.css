@@ -734,13 +734,14 @@ body {
   gap: 24px;
 }
 .main-left .btn-info {
-  padding: 5px 10px;
+  padding: 3px 10px;
   border: 1px solid rgba(255, 255, 255, 0.1490196078);
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
 }
 .main-left .btn-info span {
+  text-align: center;
   background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
   background-clip: text;
   -webkit-background-clip: text;
@@ -845,8 +846,17 @@ body {
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-  padding: 4.5px 8px;
+  padding: 4px 10px;
   white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.about .subtitle img {
+  display: block;
+  width: 16px;
+  height: 16px;
 }
 .about .subtitle-txt {
   color: #CFD9E1;
@@ -1074,7 +1084,6 @@ body {
   font-size: 50px;
   font-weight: 400;
   line-height: 60px;
-  margin: 0 0 0 -5px;
 }
 .tuning .why-tiktok-item p {
   color: #FFF;
@@ -1127,13 +1136,12 @@ body {
   font-weight: 500;
 }
 .program .accordeon__button:after {
-  content: "+";
+  content: url(../../assets/svg/plus-icon.svg);
   position: absolute;
-  margin: auto 0;
   right: 16px;
   font-size: 30px;
-  font-weight: 300;
   width: 12px;
+  height: 12px;
   transition: content 0.3s ease-in;
 }
 .program .accordeon__panel {
@@ -1175,14 +1183,14 @@ body {
   transition: all 0.3s ease;
 }
 .program .activeA:after {
-  content: "-";
+  content: url(../../assets/svg/minus-icon.svg);
   position: absolute;
   margin: auto 0;
-  right: 14px;
-  font-size: 30px;
-  font-weight: 300;
+  bottom: 41px;
+  right: 16px;
   transition: content 0.3s ease-out;
   width: 12px;
+  height: 12px;
 }
 
 .price {
@@ -1711,11 +1719,15 @@ body {
     height: 166px;
     position: relative;
   }
-  .tuning .card:nth-child(odd)::after {
+  .tuning .card:nth-child(odd)::before {
     content: url(../../assets/svg/check-circle.svg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    bottom: -18px;
+    right: -15px;
+    z-index: 200;
+  }
+  .tuning .card:nth-child(odd)::after {
+    content: "";
     width: 44px;
     height: 44px;
     background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
@@ -1730,6 +1742,9 @@ body {
     display: flex;
   }
   .tuning .card:nth-child(9)::after {
+    display: none;
+  }
+  .tuning .card:nth-child(9)::before {
     display: none;
   }
   .tuning .card p {
@@ -1774,9 +1789,21 @@ body {
     position: relative;
   }
   .main-left .btns-info {
-    padding: 44px 0;
+    padding: 30px 0;
     gap: 8px;
     flex-wrap: wrap;
+  }
+  .main-left .btns-info .btn-info {
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 4px 10px 0px rgba(93, 177, 223, 0.1);
+  }
+  .main-left .btns-info .btn-info span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.1px;
   }
   .main-left .title {
     margin: 0 0 0 0;

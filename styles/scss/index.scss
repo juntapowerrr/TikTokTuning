@@ -316,13 +316,17 @@ body{
             gap: 24px;
         }
         .btn-info{
-            padding: 5px 10px;
+            padding: 3px 10px;
             border: 1px solid #FFFFFF26;
             border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.15);
             background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
             span{
-                @include bg-linear-silver;
+                text-align: center;
+                background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
                 white-space: nowrap;
             }
         }
@@ -420,8 +424,17 @@ body{
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-        padding: 4.5px 8px;
+        padding: 4px 10px;
         white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        img{
+            display: block;
+            width: 16px;
+            height: 16px;
+        }
         &-txt{
             color: $gray;
             text-align: center;
@@ -647,7 +660,7 @@ body{
                 font-size: 50px;
                 font-weight: 400;
                 line-height: 60px;
-                margin: 0 0 0 -5px;
+                //margin: 0 0 0 -5px;
             }
             p{
                 color: #FFF;
@@ -708,15 +721,16 @@ body{
     }
 
     .accordeon__button:after {
-        content: '+';
+        content: url(../../assets/svg/plus-icon.svg);
         position: absolute;
-        margin: auto 0;
+        //margin: auto 0;
         //top: 50%;
         //transform: translate(-50%, -50%);
         right: 16px;
         font-size: 30px;
-        font-weight: 300;
+        //font-weight: 300;
         width: 12px;
+        height: 12px;
         transition: content .3s ease-in;
         // bottom: 12px;
         // border: 8px solid transparent;
@@ -771,16 +785,17 @@ body{
     }
     
     .activeA:after {
-        content: "-";
+        content: url(../../assets/svg/minus-icon.svg);
         position: absolute;
         margin: auto 0;
-        //top: 50%;
+        bottom: 41px;
         //transform: translate(-50%, -50%);
-        right: 14px;
-        font-size: 30px;
-        font-weight: 300;
+        right: 16px;
+        //font-size: 30px;
+        //font-weight: 300;
         transition: content .3s ease-out;
         width: 12px;
+        height: 12px;
     }
 }
 
