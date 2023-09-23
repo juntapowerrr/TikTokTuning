@@ -1087,14 +1087,17 @@ body{
             gap: 10px;
         }
         .accordion-item {
-          //border-bottom: 1px solid $lightgray;
+            //border-bottom: 1px solid $lightgray;
             flex: 1 0 40%;
+            appearance:none;
+            -webkit-appearance: none;
         @media (max-width: 1150px){
             flex: 1 0 100%;
         }
-        //   button[aria-expanded='true'] {
-        //     border-bottom: 1px solid $blue;
-        //   }
+        button[aria-expanded='true'] {
+            appearance:none;
+            -webkit-appearance: none;
+        }
         }
         button {
             position: relative;
@@ -1109,14 +1112,20 @@ body{
             font-weight: 700;
             line-height: 24px;
             background: transparent;
+            appearance:none;
+            -webkit-appearance: none;
             @media (max-width: 1150px){
                 font-size: 14px;
             }
           &:hover, &:focus {
             cursor: pointer;
+            appearance:none;
+            -webkit-appearance: none;
             //color: $blue;
             &::after {
               cursor: pointer;
+              appearance:none;
+              -webkit-appearance: none;
               //color: $blue;
               //border: 1px solid $blue;
             }
@@ -1162,6 +1171,8 @@ body{
         }
         button[aria-expanded='true'] {
           //color: $blue;
+          appearance:none;
+            -webkit-appearance: none;
           .icon {
             &::after {
               width: 0;
@@ -1178,9 +1189,11 @@ body{
           opacity: 0;
           max-height: 0;
           overflow: hidden;
-          transition: opacity 300ms linear, max-height 300ms linear;
+          transition: opacity .3s linear, max-height .3s linear;
           will-change: opacity, max-height;
           background: transparent;
+          appearance:none;
+            -webkit-appearance: none;
           p {
             color: var(--Gray, #CFD9E1);
             font-size: 15px;
