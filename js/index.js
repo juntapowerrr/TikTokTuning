@@ -8,7 +8,7 @@ $(document).ready(function() {
         smoothEasing: 'swing',
     });
 
-    $('.header__burger, .header__link').click(function(event) {
+    $('.header__burger, .header__link, #BtnCta1').click(function(event) {
         $('.header__burger, .header__menu').toggleClass('active');
         $('body').toggleClass('lock');
     });
