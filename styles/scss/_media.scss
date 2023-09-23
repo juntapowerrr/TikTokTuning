@@ -115,7 +115,7 @@
             &:nth-child(odd)::before{
                 content: url(../../assets/svg/check-circle.svg);
                 position: absolute;
-                bottom: -18px;
+                bottom: -19px;
                 right: -15px;
                 z-index: 200;
             }
