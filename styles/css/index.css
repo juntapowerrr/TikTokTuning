@@ -1596,9 +1596,7 @@ body {
 .footer {
   background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-.footer-wrapper {
-  padding: 34px;
+  padding: 34px 0;
 }
 .footer-menu {
   display: flex;
