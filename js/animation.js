@@ -1,54 +1,54 @@
 //Header
-ScrollReveal().reveal('.header', { delay: 100 });
+ScrollReveal().reveal('.header');
 
 //Background
-ScrollReveal().reveal('.background', { delay: 100 });
+ScrollReveal().reveal('.background');
 
 //Main Section
-ScrollReveal().reveal('#MainImg', { delay: 100 });
-ScrollReveal().reveal('#MainImgMob', { delay: 100 });
-ScrollReveal().reveal('#BtnInfo1', { delay: 100 });
-ScrollReveal().reveal('#BtnInfo2', { delay: 100 });
-ScrollReveal().reveal('#BtnInfo3', { delay: 100 });
-ScrollReveal().reveal('#Title1', { delay: 100  });
-ScrollReveal().reveal('#Subtitle1', { delay: 100  });
-ScrollReveal().reveal('.btns-cta', { delay: 100  });
+ScrollReveal().reveal('#MainImg');
+ScrollReveal().reveal('#MainImgMob');
+ScrollReveal().reveal('#BtnInfo1');
+ScrollReveal().reveal('#BtnInfo2');
+ScrollReveal().reveal('#BtnInfo3');
+ScrollReveal().reveal('#Title1');
+ScrollReveal().reveal('#Subtitle1');
+ScrollReveal().reveal('.btns-cta');
 
 
 //About Section
-ScrollReveal().reveal('#Title2', { delay: 100  });
-ScrollReveal().reveal('#Card1', { delay: 100 });
-ScrollReveal().reveal('#Card2', { delay: 100  });
-ScrollReveal().reveal('#Card3', { delay: 100  });
-ScrollReveal().reveal('#Card4', { delay: 100  });
-ScrollReveal().reveal('#Card5', { delay: 100  });
-ScrollReveal().reveal('.quote-txt', { delay: 100 });
-ScrollReveal().reveal('.quote-author', { delay: 100  });
-ScrollReveal().reveal('.story', { delay: 100  });
+ScrollReveal().reveal('#Title2',);
+ScrollReveal().reveal('#Card1');
+ScrollReveal().reveal('#Card2');
+ScrollReveal().reveal('#Card3');
+ScrollReveal().reveal('#Card4');
+ScrollReveal().reveal('#Card5');
+ScrollReveal().reveal('.quote-txt');
+ScrollReveal().reveal('.quote-author');
+ScrollReveal().reveal('.story');
 
 //Tuning Section
-ScrollReveal().reveal('#TuningTitle', { delay: 100 });
-ScrollReveal().reveal('.vector-1', { delay: 100 });
-ScrollReveal().reveal('#TuningCards', { delay: 100 });
-ScrollReveal().reveal('.vector-2', { delay: 100 });
-ScrollReveal().reveal('#TuningTitle2', { delay: 100 });
-ScrollReveal().reveal('#WhyTikTokItem1', { delay: 100 });
-ScrollReveal().reveal('#WhyTikTokItem2', { delay: 100 });
-ScrollReveal().reveal('#WhyTikTokItem3', { delay: 100 });
+ScrollReveal().reveal('#TuningTitle');
+ScrollReveal().reveal('.vector-1');
+ScrollReveal().reveal('#TuningCards');
+ScrollReveal().reveal('.vector-2');
+ScrollReveal().reveal('#TuningTitle2');
+ScrollReveal().reveal('#WhyTikTokItem1');
+ScrollReveal().reveal('#WhyTikTokItem2')
+ScrollReveal().reveal('#WhyTikTokItem3');
 
 //Program Section
-ScrollReveal().reveal('#programTitle', { delay: 100 });
-ScrollReveal().reveal('.accordeon__item', { delay: 100 });
+ScrollReveal().reveal('#programTitle');
+ScrollReveal().reveal('.accordeon__item');
 
 //Price Section
-ScrollReveal().reveal('.price-bg1', { delay: 100 });
-ScrollReveal().reveal('#priceTitle', { delay: 100 });
-ScrollReveal().reveal('#priceTxt', { delay: 100 });
-ScrollReveal().reveal('.price-box', { delay: 100 });
+ScrollReveal().reveal('.price-bg1');
+ScrollReveal().reveal('#priceTitle');
+ScrollReveal().reveal('#priceTxt');
+ScrollReveal().reveal('.price-box');
 
 //Faq Section
-ScrollReveal().reveal('#faqTitle', { delay: 100 });
-ScrollReveal().reveal('.accordion-item', { delay: 100 });
+ScrollReveal().reveal('#faqTitle');
+ScrollReveal().reveal('.accordion-item');
 
 //Footer
-ScrollReveal().reveal('.footer', { delay: 100 });
+ScrollReveal().reveal('.footer');

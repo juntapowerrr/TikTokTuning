@@ -764,6 +764,7 @@ body {
 }
 @media (max-width: 767px) {
   .header .cta-txt {
+    max-width: 250px;
     display: block;
     padding: 0 0 14px 0;
   }
@@ -1842,6 +1843,7 @@ body {
     font-size: 14px;
     line-height: 22px;
     margin: 10px 0 0 0;
+    max-width: 250px;
   }
   .price .price-box {
     display: none;
@@ -1970,7 +1972,7 @@ body {
   .main-left .txt-places {
     font-size: 14px;
     font-weight: 500;
-    max-width: 290px;
+    max-width: 250px;
   }
   .main-left .btns-cta {
     flex-direction: column;
