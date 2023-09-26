@@ -490,7 +490,6 @@ button {
 }
 .policy .text-container .txt {
   color: var(--Gray, #CFD9E1);
-  font-feature-settings: "clig" off, "liga" off;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
