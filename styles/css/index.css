@@ -1147,9 +1147,9 @@ body {
 }
 .tuning .why-tiktok-item p {
   color: #FFF;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 22px;
   margin: 5px 0 0 0;
 }
 
@@ -1172,6 +1172,7 @@ body {
   margin: 0 0 4px 0;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
 }
 .program .accordeon__button {
   display: flex;
@@ -1182,7 +1183,6 @@ body {
   padding: 12px 16px 12px 12px;
   cursor: pointer;
   border-radius: 12px;
-  background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
 }
 .program .accordeon__button span:nth-child(1) {
   color: var(--Gray, #CFD9E1);
@@ -1198,23 +1198,23 @@ body {
 .program .accordeon__button:after {
   content: url(../../assets/svg/plus-icon.svg);
   position: absolute;
+  top: 22px;
   right: 16px;
-  font-size: 30px;
-  width: 12px;
-  height: 12px;
-  transition: content 0.3s ease-in;
+  transition: content 0.3s ease;
+}
+.program .accordeon__button.activeA:after {
+  content: url(../../assets/svg/minus-icon.svg);
+  top: 16px;
 }
 .program .accordeon__panel {
   border-radius: 0 0 12px 12px;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
-  background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
+  transition: max-height 0.3s ease;
 }
 .program .panel__text {
   padding: 16px 22px 25px 12px;
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
 }
 .program .panel__text-item {
@@ -1240,17 +1240,8 @@ body {
 }
 .program .activeA {
   border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
-}
-.program .activeA:after {
-  content: url(../../assets/svg/minus-icon.svg);
-  position: absolute;
-  margin: auto 0;
-  bottom: 41px;
-  right: 16px;
-  transition: content 0.3s ease-out;
-  width: 12px;
-  height: 12px;
 }
 
 .price {
@@ -1393,6 +1384,31 @@ body {
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: var(--Gray, #CFD9E1);
+  position: relative;
+}
+.price-box-mob__card .popular {
+  display: inline-flex;
+  height: 26px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.price-box-mob__card .popular img {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+.price-box-mob__card .popular span {
+  color: var(--White, #CFD9E1);
+  font-size: 14px;
+  font-weight: 600;
 }
 .price-box-mob__card-title {
   color: #030B59;
