@@ -9,10 +9,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
     crossorigin="anonymous"></script>
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-    <!-- <script>
-        ScrollReveal({ reset: true });
-    </script> -->
     <!-- Google Tag Manager --> 
     <script>
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
@@ -44,7 +40,7 @@
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="#" class="header__logo">
+                <a href="./index.html" class="header__logo">
                     <!-- <img src="./assets/svg/logo.svg" alt="Logo"> -->
                     <div class="header__title txt-center">
                         <p class="header__title-1">TikTok Tuning</p>
@@ -285,7 +281,7 @@
     </section>
     <section class="program" id="SectionProgram">
         <div class="container">
-            <h2 class="title">Програма курсу:</h2>
+            <h2 class="title" id="programTitle">Програма курсу:</h2>
             <ul class="accordeon">
                 <li class="accordeon__item">
                     <div class="accordeon__button closed">
@@ -641,8 +637,8 @@
     <section class="price" id="SectionPrice">
         <img class="price-bg1" src="./assets/svg/price-bg.svg" alt="">
         <div class="container">
-            <h2 class="title">Купити курс:</h2>
-            <p class="txt">
+            <h2 class="title" id="priceTitle">Купити курс:</h2>
+            <p class="txt" id="priceTxt">
                 Встигни прийняти участь.<br>
                 До зміни вартості залишилось 09:19:34
             </p>
@@ -981,9 +977,35 @@
     </section>
     <section class="faq">
         <div class="container">
-            <h2 class="title">FAQ</h2>
+            <h2 class="title" id="faqTitle">FAQ</h2>
             <div class="container-accordion">
                 <div class="accordion">
+                  <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Чому мені варто приєднатися до курсу?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p>Цей курс для тебе, якщо ти хочеш безкоштовно та швидко набрати аудиторію та перегляди своїх відео в TikTok, знайти нових клієнтів на свої послуги / товари, підвищити свою впізнаваність та дохід.</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Чи можна розділити оплату курсу на декілька платежів?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p>Так,  доступно декілька варіантів розстрочки.
+
+                        Залиште бронь і моя команда допоможе вам обрати зручний спосіб оплати, або напишіть нам в телеграмі @[TikTokTuning_Support](https://t.me/TikTokTuning_Support)</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Чи підійде мені курс, якщо я раніше не продавала нічого в TikTok?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p>Так, мати досвід продажів необовʼязково. Я структурувала подачу інформації таким чином, що курс підійде як для початківців, так і для досвідчених користувачів TikTok.</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Скільки триватиме курс?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p>Курс має гнучкий графік, і ви зможете проходити його у власному темпі. Уроки перших 6-ти модулів будуть опубліковані до дд.мм, решти модулів - до дд.мм.</p>
+                    </div>
+                  </div>
                   <div class="accordion-item">
                     <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Як довго в мене буде доступ до матеріалів курсу?</span><span class="icon" aria-hidden="true"></span></button>
                     <div class="accordion-content">
@@ -1069,9 +1091,6 @@
         </div>
     </footer>
     <script src='./js/scrollreveal.js'></script>
-    <script>
-        window.sr = new scrollReveal();
-    </script>
     <script src="./js/accordion.js"></script>
     <script src="./js/accordion2.js"></script>
     <script src="./js/animation.js"></script>

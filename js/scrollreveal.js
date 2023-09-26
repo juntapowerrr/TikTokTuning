@@ -34,7 +34,7 @@
 		desktop: true,
 		mobile: true,
 		reset: false,
-		useDelay: 'onload',
+		useDelay: 'always',
 		viewFactor: 0.0,
 		viewOffset: {
 			top: 0,

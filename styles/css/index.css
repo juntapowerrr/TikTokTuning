@@ -1191,7 +1191,7 @@ body {
 }
 .program .accordeon__button span:last-child {
   color: var(--Gray, #CFD9E1);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 500;
 }
 .program .accordeon__button:after {
