@@ -12,8 +12,7 @@ ScrollReveal().reveal('#BtnInfo2', { delay: 100 });
 ScrollReveal().reveal('#BtnInfo3', { delay: 100 });
 ScrollReveal().reveal('#Title1', { delay: 100  });
 ScrollReveal().reveal('#Subtitle1', { delay: 100  });
-ScrollReveal().reveal('#BtnCta2', { delay: 100  });
-ScrollReveal().reveal('#BtnCta3', { delay: 100  });
+ScrollReveal().reveal('.btns-cta', { delay: 100  });
 
 
 //About Section
