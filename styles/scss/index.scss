@@ -35,39 +35,21 @@ body{
         justify-content: space-between;
         height: 74px;
         align-items: center;
-        // @media (max-width: 375px) {
-        //     height: 50px;
-        // }
     }
     &__logo{
-        //flex: 0 0 55px;
         overflow: hidden;
         position: relative;
         z-index: 3;
         display: flex;
         justify-content: center;
         align-items: center;
-        // img{
-        //     display: block;
-        //     max-width: 100%;
-        //     width: 55px;
-        //     height: 55px;
-        //     @media (max-width: 375px) {
-        //         width: 30px;
-        //         height: 30px;
-        //     }
-        // }
     }
     &__title{
-        //margin: 0 0 0 12px;
         &-1{
             font-weight: 700;
             font-size: 28px;
             letter-spacing: -0.5px;
             color: #fff;
-            // @media (max-width: 375px) {
-            //     font-size: 14px;
-            // }
         }
         &-2{
             font-weight: 200;
@@ -75,14 +57,7 @@ body{
             letter-spacing: 5.5px;
             color: #fff;
             margin: 0 0 0 5px;
-            //margin-top: -3px;
-            // @media (max-width: 375px) {
-            //     font-size: 10px;
-            // }
         }
-        // @media (max-width: 767px) {
-        //     margin: 0 0 0 5px;
-        // }
     }
     &__burger{
         display: none;
@@ -117,14 +92,10 @@ body{
             }
 
             &::before{
-                // top: 16px;
-                // left: 16px;
                 top: 13px;
             }
 
             &::after{
-                // bottom: 16px;
-                // left: 16px;
                 bottom: 13px;
             }
 
@@ -144,33 +115,6 @@ body{
                 transform: scale(0);
             }
         }
-        // @media (max-width: 375px) {
-        //     width: 30px;
-        //     height: 30px;
-        //     &::before, &::after{
-        //         content: '';
-        //         width: 10px;
-        //     }
-
-        //     &::before{
-        //         top: 16px;
-        //         left: 9px;
-        //     }
-
-        //     &::after{
-        //         bottom: 16px;
-        //         left: 9px;
-        //     }
-
-        //     &.active::before{
-        //         top: 13px;
-        //         left: 8px;
-        //     }
-        //     &.active::after{
-        //         bottom: 13px;
-        //         left: 8px;
-        //     }
-        // }
     }
     &__menu{
         display: flex;
@@ -196,12 +140,6 @@ body{
                 display: block;
             }
         }
-        @media (max-width: 375px){
-            //padding: 70px 15px 20px 15px;
-            // &.active{
-            //     top: 0;
-            // }
-        }
     }
     &__list{
         display: flex;
@@ -211,9 +149,6 @@ body{
             margin: 0 24px 0 0;
             @media (max-width: 767px) {
                 margin: 0 0 24px 0;
-                // &:first-child{
-                //     margin: 0 0 20px 0;
-                // }
             }
         }
         li:nth-child(4){
@@ -278,13 +213,11 @@ body{
     }
     .btn{
         z-index: 3;
-        //margin: 14px 0 0 0;
     }
 }
 
 .main{
     padding: 74px 0 0 0;
-    //max-width: 650px;
     position: relative;
     .light-1{
         position: absolute;
@@ -451,8 +384,6 @@ body{
         margin: 18px 0 0 0;
     }
     .achievements{
-        // position: relative;
-        // z-index: auto;
         padding: 150px 0;
     }
     .quote{
@@ -464,7 +395,6 @@ body{
             line-height: 64px;
             max-width: 1070px;
             @include bg-linear-silver;
-            //padding: 20px;
             display: block;
             position: relative;
             padding: 30px;
@@ -536,7 +466,6 @@ body{
 }
 
 .tuning{
-    //background-color: blueviolet;
     .title{
         font-size: 44px;
         font-weight: 700;
@@ -611,7 +540,6 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        //flex: 0 0 200px;
         height: 115px;
         padding: 5px;
         border-radius: 24px;
@@ -661,7 +589,6 @@ body{
                 font-size: 50px;
                 font-weight: 400;
                 line-height: 60px;
-                //margin: 0 0 0 -5px;
             }
             p{
                 color: #FFF;
@@ -689,12 +616,14 @@ body{
     }
     
     .accordeon__item {
-        //color: $gray;
         margin: 0 0 4px 0;
         border-radius: 12px;
-        //border: 1px solid rgba(255, 255, 255, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.15);
         background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
+        transition: all .3s ease;
+        &:hover{
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
     }
     
     .accordeon__button {
@@ -706,9 +635,6 @@ body{
         padding: 12px 16px 12px 12px;
         cursor: pointer;
         border-radius: 12px;
-        //border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        //background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-        //transition: all .3s ease-in;
         span:nth-child(1){
             color: var(--Gray, #CFD9E1);
             font-size: 12px;
@@ -735,7 +661,6 @@ body{
     }
     
     .accordeon__panel {
-        //border-top: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 0 0 12px 12px;
         max-height: 0;
         overflow: hidden;
@@ -772,7 +697,6 @@ body{
     .activeA {
         border-radius: 12px 12px 0 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        //transition: all 0.3s ease;
     }
 }
 
@@ -800,15 +724,13 @@ body{
         font-weight: 400;
         line-height: 30px;
         margin: 10px 0 80px 0;
-        //max-width: 292px;
     }
 
     &-box{
         margin: 0 auto;
         max-width: 100%;
         border-radius: 8px;
-        background: linear-gradient(127deg, #E1E1E9 62.27%, rgba(255, 255, 255, 0.44) 96.63%);
-
+        background: #fff;
     }
     .cards{
         display: flex;
@@ -992,10 +914,6 @@ body{
                 display: inline-block;
                 padding: 3px;
                 transition: all .3s ease;
-                // &-up{
-                //     transform: rotate(-135deg);
-                //     -webkit-transform: rotate(-135deg);
-                // }
                 &-down{
                     transform: rotate(45deg);
                     -webkit-transform: rotate(45deg);
@@ -1022,7 +940,6 @@ body{
                 gap: 10px;
                 padding: 13.5px;
                 border-radius: 12px;
-                //border: 1px solid rgba(255, 255, 255, 0.15);
                 background: #C4C5D6;
                 p{
                     font-size: 13px;
@@ -1086,11 +1003,7 @@ body{
                 .arrow{
                     border-color: $gray;
                 }
-                //color: var(--Gray, #CFD9E1);
             }
-            // &-content{
-                
-            // }
             &-item{
                 p{
                     -webkit-text-fill-color: var(--Gray, #CFD9E1);
@@ -1117,7 +1030,6 @@ body{
     }
     .container-accordion {
         margin: 0 auto;
-        //padding: 4rem;
         width: 100%;
     }
       
@@ -1129,15 +1041,10 @@ body{
             gap: 10px;
         }
         .accordion-item {
-            //border-bottom: 1px solid $lightgray;
             flex: 1 0 40%;
             @media (max-width: 1150px){
                 flex: 1 0 100%;
             }
-            // button[aria-expanded='true'] {
-            //     appearance:none;
-            //     -webkit-appearance: none;
-            // }
         }
         button {
             position: relative;
@@ -1147,7 +1054,6 @@ body{
             padding: 10px 50px 10px 0;
             border: none;
             outline: none;
-            //border: 1px solid yellow;
             font-size: 17px;
             font-weight: 700;
             line-height: 24px;
@@ -1158,15 +1064,11 @@ body{
           &:hover, &:focus, &:focus-visible {
             cursor: pointer;
             box-shadow: none;
-            //color: $blue;
             &::after {
               cursor: pointer;
-              //color: $blue;
-              //border: 1px solid $blue;
             }
           }
           .accordion-title {
-            //padding: 1em 1.5em 1em 0;
             background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
             background-clip: text;
             -webkit-background-clip: text;
@@ -1179,9 +1081,6 @@ body{
             right: 5px;
             width: 22px;
             height: 22px;
-            //border: 1px solid;
-            //border-radius: 22px;
-            //border: 1px solid yellow;
             &::before {
               display: block;
               position: absolute;
@@ -1205,7 +1104,6 @@ body{
           }
         }
         button[aria-expanded='true'] {
-          //color: white;
           .icon {
             &::after {
               width: 0;
@@ -1229,7 +1127,7 @@ body{
             font-size: 15px;
             font-weight: 400;
             line-height: 25px;
-            //margin: 10px 0 0 0;
+
             padding: 0 50px 0 0;
             @media (max-width: 1150px){
                 font-size: 12px;
@@ -1243,15 +1141,10 @@ body{
     background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding: 34px 0;
-    // &-wrapper{
-        
-    // }
     &-menu{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        //align-items: flex-start;
-        //gap: 36px;
         &-items{
             display: flex;
             flex-direction: row;
@@ -1262,9 +1155,6 @@ body{
                 gap: 36px;
             }
         }
-        // &-item{
-            
-        // }
         &-link{
             font-size: 14px;
             font-weight: 400;
@@ -1282,9 +1172,6 @@ body{
             flex-direction: row;
             flex-wrap: nowrap;
             gap: 8px;
-            // a img{
-                
-            // }
         }
     }
 
@@ -1295,6 +1182,9 @@ body{
             font-weight: 400;
             line-height: 20px;
             opacity: 0.66;
+        }
+        &-txt a:hover{
+            opacity: 1;
         }
     }
     @media (max-width: 1100px) {

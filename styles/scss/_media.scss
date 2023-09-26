@@ -24,9 +24,6 @@
                 letter-spacing: -1px;
                 max-width: 310px;
                 padding: 50px 0 0 0;
-                // &::before{
-                    
-                // }
                 &::after{
                     right: 100px;
                     bottom: -45px;
@@ -121,10 +118,6 @@
             }
             &:nth-child(odd)::after{
                 content: '';
-                //content: url(../../assets/svg/check-circle.svg);
-                //display: flex;
-                //justify-content: center;
-                //align-items: center;
                 width: 44px;
                 height: 44px;
                 background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));;
@@ -159,7 +152,6 @@
             justify-content: flex-start;
             align-items: flex-start;
             gap: 44px;
-            //padding: 44px 0 44px 0;
             padding: 0;
             margin: 22px 0 0 0;
             &-item{
@@ -246,9 +238,6 @@
             font-size: 30px;
             line-height: 40px;
         }
-        // .accordeon__button{
-            
-        // }
     }
     .light-1, .light-2, .light-3, .light-4, .light-5, .light-6 {
         display: none;
@@ -263,13 +252,9 @@
             align-items: flex-start;
             flex-wrap: nowrap;
             gap: 0;
-            //height: 100%;
             overflow: hidden;
             &-txt{
                 max-width: 310px;
-                // &::before{
-                    
-                // }
                 &::after{
                     right: 130px;
                     bottom: -45px;
@@ -293,30 +278,6 @@
     }
 }
 @media (max-width: 860px) {
-    // .program{
-    //     .accordeon__item {
-    //         margin: 0 0 8px 0;
-    //     }
-    //     .accordeon__button {
-    //         padding: 5px 65px 5px 12px;
-    //         font-size: 14px;
-    //     }
-    //     .accordeon__button::after {
-    //         right: 12px;
-    //     }
-    //     .activeA::after{
-    //         right: 17px;
-    //     }
-    //     .panel__text {
-    //         padding: 0 12px 5px 12px;
-    //         width: 100%;
-    //         transition: all .5s ease;
-    
-    //         p{
-    //             font-size: 14px;
-    //         }
-    //     }
-    // }
     .price{
         &-box-mob{
             flex-direction: column;
@@ -349,7 +310,6 @@
                 position: absolute;
                 bottom: 50px;
                 left: -100px;
-                //transform: rotate(-20deg);
             }
             #MainTTIcon2{
                 width: 43px;
