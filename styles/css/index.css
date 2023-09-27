@@ -58,6 +58,10 @@ button {
   text-align: center;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .btn {
   display: block;
   width: 200px;
@@ -683,7 +687,7 @@ body {
     padding: 114px 20px 44px 20px;
   }
   .header__menu.active {
-    top: 0;
+    top: 1px;
   }
   .header__menu-txt {
     display: block;
@@ -1972,7 +1976,6 @@ body {
   .main-left .txt-places {
     font-size: 14px;
     font-weight: 500;
-    max-width: 250px;
   }
   .main-left .btns-cta {
     flex-direction: column;

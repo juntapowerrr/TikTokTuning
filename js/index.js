@@ -5,12 +5,12 @@ $(document).ready(function() {
         offset: $('.header').offsetHeight,
         smooth: true,
         smoothDuration: 500,
-        smoothEasing: 'swing',
+        smoothEasing: 'swing'
     });
 
     $('.header__burger, .header__link, #BtnCta1').click(function(event) {
         $('.header__burger, .header__menu').toggleClass('active');
-        $('body').toggleClass('lock');
+        $('body, html').toggleClass('lock');
     });
     $(window).on('scroll', function() {
         $('#container').css({

@@ -135,7 +135,7 @@ body{
             background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.95) 89.23%));
             padding: 114px 20px 44px 20px;
             &.active{
-                top: 0;
+                top: 1px;
             }
             &-txt{
                 display: block;
