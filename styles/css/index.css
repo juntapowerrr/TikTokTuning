@@ -18,7 +18,7 @@
   height: 200px;
   margin-top: -100px;
   margin-left: -100px;
-  background: url("../../assets/gif/preloader-2.gif") no-repeat 50% 50%;
+  background: url("../../assets/gif/preloader.gif") no-repeat 50% 50%;
 }
 
 .loaded_hiding .preloader {
