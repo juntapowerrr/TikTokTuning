@@ -27,12 +27,13 @@ function getFondyPayload($tarif)
     $timestamp = strtotime("now");
     $fondy = getCurrentEnv()["fondy"];
     $tarifs = getCurrentEnv()["tarifs"];
+    $tarifAmount = isset($tarifs[$tarif]) ? $tarifs[$tarif] :  $tarifs["pro"];
 
     return [
         "merchant_id" => $fondy["merchant_id"],
         "order_id" => "{$fondy["payment_preifx"]}_{$timestamp}",
         "order_desc" => $fondy["payment_description"],
-        "amount" => $tarifs[$tarif],
+        "amount" => $tarifAmount,
         "currency" => 'UAH',
         "lang" => 'uk',
         "delayed" => 'N',
@@ -88,6 +89,7 @@ function makeFondyRequest($postData)
 
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json',
         'Content-Length: ' . strlen($jsonData)
@@ -104,18 +106,17 @@ function makeFondyRequest($postData)
     if ($response) {
         return $response;
     } else {
-       return null;
+        return null;
     }
 }
 
-function createPayment()
+function createPayment($tarif)
 {
     $base_url = getCurrentEnv()['base_url'];
-    $params = getFondyPayload("basic");
+    $params = getFondyPayload($tarif);
     $signature = getSignature($params);
 
     $postData = array_merge($params, ["signature" => $signature]);
-
 
     $response = makeFondyRequest($postData);
     if ($response === null) {
@@ -124,16 +125,31 @@ function createPayment()
     }
 
     $json = json_decode($response);
-    if (!isset($json["response"]["checkout_url"])) {
+    if (!isset($json->response->checkout_url)) {
         header('Location: ' . "$base_url?error=fondy_decode");
-        exit; 
+        exit;
     }
 
-    // $checkout_url = $json->response->checkout_url;
-    var_dump($json);
-    $checkout_url = '123';
-    header('Location: ' . $checkout_url);
+    header('Location: ' . $json->response->checkout_url);
 }
 
+if (isset($_POST['tarif'])) {
+    createPayment($_POST['tarif']);
+    exit;
+}
 
-createPayment();
+if (isset($_POST['signature'])) {
+    $base_url = getCurrentEnv()['base_url'];
+    $valid = check($_POST);
+
+    if ($valid && $_POST['response_status'] === 'success' && $_POST['order_status'] === 'approved') {
+        $order_id = $_POST['order_id'];
+        header('Location: ' . "$base_url/?payment=success&order_id={$order_id}");
+    } else {
+        header('Location: ' . "$base_url/?payment=error");
+    }
+    exit;
+}
+
+$base_url = getCurrentEnv()['base_url'];
+header('Location: ' . "$base_url/?payment=no_payment");
