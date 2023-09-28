@@ -88,8 +88,10 @@ button {
   text-align: center;
 }
 
-.lock {
-  overflow: hidden;
+@media (max-width: 767px) {
+  .lock {
+    overflow: hidden;
+  }
 }
 
 .italic {
