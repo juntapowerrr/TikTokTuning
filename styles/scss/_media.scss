@@ -77,8 +77,12 @@
             font-size: 14px;
             line-height: 22px;
             margin: 10px 0 0 0;
-            max-width: 250px;
+            max-width: 320px;
         }
+        .txt > br {
+            display: none;
+        }
+
         .price-box{
             display: none;
         }
@@ -209,8 +213,11 @@
             .txt-places{
                 font-size: 14px;
                 font-weight: 500;
-                //max-width: 250px;
+                //max-width: 330px;
             }
+            // .txt-places > br{
+            //     display: none;
+            // }
             .btns-cta{
                 flex-direction: column;
                 margin: 32px 0 0 0;
