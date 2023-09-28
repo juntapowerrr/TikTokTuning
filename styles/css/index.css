@@ -154,9 +154,11 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background: #000000;
   overflow: hidden;
   z-index: -999;
+  overscroll-behavior: none;
+  padding-bottom: 70px;
+  transform: translateY(70px);
 }
 
 .background span {
@@ -521,6 +523,10 @@ button {
   box-shadow: 100vmin 0 12.8277049324vmin currentColor;
 }
 
+.timer {
+  font-weight: 600;
+}
+
 .policy {
   padding: 94px 0 44px 0;
 }
@@ -596,8 +602,12 @@ button {
 }
 
 body {
-  background-color: #000000;
+  background-color: #0A0A0A;
   position: relative;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .header {
@@ -1702,8 +1712,7 @@ body {
 }
 
 .footer {
-  background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  background: #0A0A0A;
   padding: 34px 0;
 }
 .footer-menu {
@@ -1720,6 +1729,10 @@ body {
 .footer-menu-items:last-child {
   flex-direction: row;
   gap: 36px;
+}
+.footer-menu-item:nth-child(2) img {
+  width: auto;
+  height: 30px;
 }
 .footer-menu-link {
   font-size: 14px;
@@ -1744,6 +1757,10 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 8px;
+}
+.footer-menu-icons img {
+  width: 30px;
+  height: 30px;
 }
 .footer-copyright-txt, .footer-copyright-txt a {
   color: var(--Gray, #CFD9E1);

@@ -12,9 +12,12 @@ $color: linear-gradient(90deg, rgba(3, 11, 89, 0.80) 0%, rgba(0, 22, 149, 0.80) 
     height: 100%;
     top: 0;
     left: 0;
-    background: #000000;
+    //background: #000000;
     overflow: hidden;
     z-index: -999;
+    overscroll-behavior: none;
+    padding-bottom: 70px;
+	transform: translateY(70px);
 }
 
 .background span {
