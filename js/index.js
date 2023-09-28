@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     $('.header__burger, .header__link, #BtnCta1').click(function(event) {
         $('.header__burger, .header__menu').toggleClass('active');
-        $('body, html').toggleClass('lock');
+        $('body').toggleClass('lock');
     });
     $(window).on('scroll', function() {
         $('#container').css({

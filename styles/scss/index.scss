@@ -1,3 +1,4 @@
+@import 'preloader';
 @import 'reset';
 @import 'var';
 @import 'common';
@@ -221,24 +222,6 @@ body{
 .main{
     padding: 74px 0 0 0;
     position: relative;
-    .light-1{
-        position: absolute;
-        left: 0;
-        top: 150px;
-        z-index: -333;
-    }
-    .light-2{
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -333;
-    }
-    .light-3{
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: -333;
-    }
     .row {
         display: flex;
         align-items: center;
@@ -310,25 +293,6 @@ body{
 
 .about{
     position: relative;
-    .light-4{
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: -333;
-    }
-    .light-5{
-        position: absolute;
-        left: -50px;
-        bottom: -200px;
-        z-index: -333;
-    }
-    .light-6{
-        position: absolute;
-        left: 0;
-        bottom: -400px;
-        z-index: -333;
-    }
-
     .title{
         font-size: 44px;
         font-weight: 700;
@@ -380,7 +344,7 @@ body{
     }
     .txt{
         color: $gray;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 400;
         line-height: 24px;
         margin: 18px 0 0 0;
@@ -634,19 +598,21 @@ body{
         gap: 4px;
         position: relative;
         color: $gray;
-        padding: 12px 16px 12px 12px;
+        padding: 12px 32px 12px 12px;
         cursor: pointer;
         border-radius: 12px;
         span:nth-child(1){
             color: var(--Gray, #CFD9E1);
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 500;
+            letter-spacing: -0.13px;
             opacity: 0.44;
         }
         span:last-child{
             color: var(--Gray, #CFD9E1);
-            font-size: 13.5px;
-            font-weight: 500;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.6px;
         }
     }
 
@@ -746,6 +712,7 @@ body{
         padding: 64px 30px;
         text-align: center;
         max-width: 260px;
+        position: relative;
         &:nth-child(2){
             border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.15);
@@ -783,7 +750,30 @@ body{
             margin: 68px 0 0 0;
         }
     }
-
+    .popular{
+        display: inline-flex;
+        height: 26px;
+        padding: 0px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        &-img{
+            display: block;
+            width: 14px;
+            height: 14px;
+        }
+        &-txt{
+            color: var(--White, #CFD9E1);
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
     &-table{
         padding: 40px 30px;
     }
@@ -843,30 +833,6 @@ body{
         border: 1px solid rgba(255, 255, 255, 0.15);
         background: var(--Gray, #CFD9E1);
         position: relative;
-        .popular{
-            display: inline-flex;
-            height: 26px;
-            padding: 0px 8px;
-            justify-content: center;
-            align-items: center;
-            gap: 2px;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-            position: absolute;
-            top: 22px;
-            right: 22px;
-            img{
-                display: block;
-                width: 14px;
-                height: 14px;
-            }
-            span{
-                color: var(--White, #CFD9E1);
-                font-size: 14px;
-                font-weight: 600;
-            }
-        }
         &-title{
             color: $cta;
             font-size: 18px;
@@ -902,7 +868,7 @@ body{
             margin: 32px 0 0 0;
             &-btn {
                 cursor: pointer;
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: 400;
                 background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
                 background-clip: text;

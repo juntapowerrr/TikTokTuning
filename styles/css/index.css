@@ -1,5 +1,35 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #E1E1E9;
+  z-index: 1001;
+}
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  background: url("../../assets/gif/preloader-2.gif") no-repeat 50% 50%;
+}
+
+.loaded_hiding .preloader {
+  transition: 1s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
 body,
 html {
   margin: 0;
@@ -60,6 +90,10 @@ button {
 
 .lock {
   overflow: hidden;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .btn {
@@ -781,24 +815,6 @@ body {
   padding: 74px 0 0 0;
   position: relative;
 }
-.main .light-1 {
-  position: absolute;
-  left: 0;
-  top: 150px;
-  z-index: -333;
-}
-.main .light-2 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -333;
-}
-.main .light-3 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -333;
-}
 .main .row {
   display: flex;
   align-items: center;
@@ -873,24 +889,6 @@ body {
 .about {
   position: relative;
 }
-.about .light-4 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -333;
-}
-.about .light-5 {
-  position: absolute;
-  left: -50px;
-  bottom: -200px;
-  z-index: -333;
-}
-.about .light-6 {
-  position: absolute;
-  left: 0;
-  bottom: -400px;
-  z-index: -333;
-}
 .about .title {
   font-size: 44px;
   font-weight: 700;
@@ -945,7 +943,7 @@ body {
 }
 .about .txt {
   color: #CFD9E1;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 24px;
   margin: 18px 0 0 0;
@@ -1203,20 +1201,22 @@ body {
   gap: 4px;
   position: relative;
   color: #CFD9E1;
-  padding: 12px 16px 12px 12px;
+  padding: 12px 32px 12px 12px;
   cursor: pointer;
   border-radius: 12px;
 }
 .program .accordeon__button span:nth-child(1) {
   color: var(--Gray, #CFD9E1);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
+  letter-spacing: -0.13px;
   opacity: 0.44;
 }
 .program .accordeon__button span:last-child {
   color: var(--Gray, #CFD9E1);
-  font-size: 13.5px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
 }
 .program .accordeon__button:after {
   content: url(../../assets/svg/plus-icon.svg);
@@ -1311,6 +1311,7 @@ body {
   padding: 64px 30px;
   text-align: center;
   max-width: 260px;
+  position: relative;
 }
 .price .card:nth-child(2) {
   border-radius: 24px;
@@ -1347,6 +1348,30 @@ body {
 }
 .price .card .btn {
   margin: 68px 0 0 0;
+}
+.price .popular {
+  display: inline-flex;
+  height: 26px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.price .popular-img {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+.price .popular-txt {
+  color: var(--White, #CFD9E1);
+  font-size: 14px;
+  font-weight: 600;
 }
 .price-table {
   padding: 40px 30px;
@@ -1408,30 +1433,6 @@ body {
   background: var(--Gray, #CFD9E1);
   position: relative;
 }
-.price-box-mob__card .popular {
-  display: inline-flex;
-  height: 26px;
-  padding: 0px 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.44) 89.23%);
-  position: absolute;
-  top: 22px;
-  right: 22px;
-}
-.price-box-mob__card .popular img {
-  display: block;
-  width: 14px;
-  height: 14px;
-}
-.price-box-mob__card .popular span {
-  color: var(--White, #CFD9E1);
-  font-size: 14px;
-  font-weight: 600;
-}
 .price-box-mob__card-title {
   color: #030B59;
   font-size: 18px;
@@ -1468,7 +1469,7 @@ body {
 }
 .price-box-mob__card .details-btn {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
   background-clip: text;
@@ -1813,9 +1814,12 @@ body {
   }
   .about .story {
     margin: 24px 0 0 0;
+    padding: 24px 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    border-top: 1px dashed rgba(207, 217, 225, 0.15);
+    border-bottom: 1px dashed rgba(207, 217, 225, 0.15);
   }
   .about .story img {
     display: none;
@@ -1883,7 +1887,7 @@ body {
     position: relative;
   }
   .tuning .card:nth-child(odd)::before {
-    content: url(../../assets/svg/check-circle.svg);
+    content: url(../../assets/svg/emoji/emoji-money.svg);
     position: absolute;
     bottom: -19px;
     right: -15px;
@@ -1893,7 +1897,7 @@ body {
     content: "";
     width: 44px;
     height: 44px;
-    background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));
+    background: #00042F;
     position: absolute;
     bottom: -26px;
     right: -26px;
@@ -1990,7 +1994,7 @@ body {
     margin: 22px 0 0 0;
   }
   .about .txt {
-    font-size: 12px;
+    font-size: 13px;
     margin: 12px 0 0 0;
   }
   .tuning .title {
@@ -2000,9 +2004,6 @@ body {
   .program .title {
     font-size: 30px;
     line-height: 40px;
-  }
-  .light-1, .light-2, .light-3, .light-4, .light-5, .light-6 {
-    display: none;
   }
 }
 @media (max-width: 900px) {

@@ -23,6 +23,9 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T42QS792" 
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
     <!-- End Google Tag Manager (noscript) -->
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
     <div class="background">
         <span></span>
         <span></span>
@@ -41,11 +44,11 @@
         <div class="container">
             <div class="header__body">
                 <a href="./index.html" class="header__logo">
-                    <!-- <img src="./assets/svg/logo.svg" alt="Logo"> -->
-                    <div class="header__title txt-center">
+                    <img src="./assets/svg/site-logo.svg" alt="Logo">
+                    <!-- <div class="header__title txt-center">
                         <p class="header__title-1">TikTok Tuning</p>
                         <p class="header__title-2">Svitlana Lozinska</p>
-                    </div>
+                    </div> -->
                 </a>
                 <div class="header__burger">
                     <span></span>
@@ -472,14 +475,11 @@
                     <div class="footer-menu-item">
                         <p class="footer-menu-txt">Я в соціальних медіа:</p>
                         <div class="footer-menu-icons">
-                            <a class="hover-btn" href="#">
-                                <img src="./assets/svg/telegram-logo.svg" alt="Telegram logo icon">
-                            </a>
                             <a class="hover-btn" href="https://www.tiktok.com/@lady.tuning" target="_blank">
-                                <img src="./assets/svg/tiktok-logo.svg" alt="Tiktok logo icon">
+                                <img src="./assets/images/tiktok-logo.png" alt="TikTok logo icon">
                             </a>
                             <a class="hover-btn" href="https://www.instagram.com/lady.tuning" target="_blank">
-                                <img src="./assets/svg/inst-logo.svg" alt="Instagram logo icon">
+                                <img src="./assets/images/inst-logo.png" alt="Instagram logo icon">
                             </a>
                         </div>
                     </div>
@@ -487,10 +487,10 @@
                         <p class="footer-menu-txt">Підтримуємо платежі:</p>
                         <div class="footer-menu-icons">
                             <a class="hover-btn" href="https://www.visa.com.ua/uk_UA" target="_blank">
-                                <img src="./assets/svg/visa-logo.svg" alt="Visa logo icon">
+                                <img src="./assets/images/visa-logo.png" alt="Visa logo icon">
                             </a>
                             <a class="hover-btn" href="https://www.mastercard.ua/uk-ua.html" target="_blank">
-                                <img src="./assets/svg/mastercard-logo.svg" alt="Mastercard logo icon">
+                                <img src="./assets/images/mastercard-logo.png" alt="Mastercard logo icon">
                             </a>
                         </div>
                     </div>
@@ -507,8 +507,16 @@
             </div>
         </div>
     </footer>
+    <script async>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 1000);
+        }
+    </script>
     <script src='./js/scrollreveal.js'></script>
-    <script src="./js/timer.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/jquery.fixedheaderscroll.js"></script>
     <script src="./js/index.js"></script>

@@ -40,9 +40,12 @@
         }
         .story{
             margin: 24px 0 0 0;
+            padding: 24px 0;
             flex-direction: column;
             align-items: flex-start;
             gap: 12px;
+            border-top: 1px dashed rgba($color: #CFD9E1, $alpha: 0.15);
+            border-bottom: 1px dashed rgba($color: #CFD9E1, $alpha: 0.15);
             img{
                 display: none;
             }
@@ -111,7 +114,7 @@
             height: 166px;
             position: relative;
             &:nth-child(odd)::before{
-                content: url(../../assets/svg/check-circle.svg);
+                content: url(../../assets/svg/emoji/emoji-money.svg);
                 position: absolute;
                 bottom: -19px;
                 right: -15px;
@@ -121,7 +124,7 @@
                 content: '';
                 width: 44px;
                 height: 44px;
-                background: var(--white-linear-silver, linear-gradient(138deg, #E1E1E9 62.82%, rgba(255, 255, 255, 0.44) 82.32%));;
+                background: #00042F;
                 position: absolute;
                 bottom: -26px;
                 right: -26px;
@@ -224,7 +227,7 @@
             margin: 22px 0 0 0;
         }
         .txt{
-            font-size: 12px;
+            font-size: 13px;
             margin: 12px 0 0 0;
         }
     }
@@ -239,9 +242,6 @@
             font-size: 30px;
             line-height: 40px;
         }
-    }
-    .light-1, .light-2, .light-3, .light-4, .light-5, .light-6 {
-        display: none;
     }
 }
 @media (max-width: 900px) {
