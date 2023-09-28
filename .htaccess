@@ -105,27 +105,42 @@ AddOutputFilterByType DEFLATE application/x-javascript
     </FilesMatch>
 </IfModule>
 
-RewriteEngine On
-RewriteBase /
+# RewriteEngine On
+# RewriteBase /
+# RewriteRule ^index\.html$ / [R=301,L]
+# RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+<IfModule mod_rewrite.c>
+    Options +MultiViews
+    RewriteEngine On
+    RewriteBase /
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ $1.html [NC,L]
+    RewriteRule ^(.*)#(.*)$ /$1#$2 [L,R=301,NE]
+    
+    # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    # RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L,QSA]
-#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /..html\ HTTP/ RewriteRule ^(.).html$ /$1 [R=301,L]
-
-#redirect html pages to the root domain
-RewriteRule ^index.html$ / [L,R=301]
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
-RewriteRule ^([a-zA-z0-9]+).html$ /$1   [L,R=301]
-
-RewriteCond %{REQUEST_URI} !\?
-RewriteCond %{REQUEST_URI} !\&
-RewriteCond %{REQUEST_URI} !=
-RewriteCond %{REQUEST_URI} !.
-
-# RewriteCond %{REQUEST_URI} ![^\/]$
-# # RewriteRule ^(.*)\/$ /$1 [R=301,L]
+    # RewriteCond %{HTTP_HOST} !^$
+    # RewriteCond %{HTTP_HOST} !^www\. [NC]
+    # RewriteCond %{HTTPS}s ^on(s)|
+    # RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301]
+    
+    # RewriteCond %{THE_REQUEST} ^GET\ (.*)\.html\ HTTP
+    # RewriteRule (.*)\.html$ $1 [R=301]
+    
+    # RewriteRule (.*)/index$ $1/ [R=301]
+    
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_URI} /$
+    # RewriteRule (.*)/ $1 [R=301]
+    
+    # RewriteCond %{REQUEST_FILENAME}.html -f
+    # RewriteCond %{REQUEST_URI} !/$
+    # RewriteRule (.*) $1\.html [L]
+    # RewriteRule ^([^\.]+)$ $1.html [NC,L]
+</IfModule>
 
 # Запрет на воровство картинок (hotlinking)
 #RewriteCond %{HTTP_REFERER} !^$
