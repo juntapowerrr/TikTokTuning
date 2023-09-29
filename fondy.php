@@ -144,9 +144,9 @@ if (isset($_POST['signature'])) {
 
     if ($valid && $_POST['response_status'] === 'success' && $_POST['order_status'] === 'approved') {
         $order_id = $_POST['order_id'];
-        header('Location: ' . "$base_url/?payment=success&order_id={$order_id}");
+        header('Location: ' . "$base_url/success.html&order_id={$order_id}");
     } else {
-        header('Location: ' . "$base_url/?payment=error");
+        header('Location: ' . "$base_url/error.html");
     }
     exit;
 }
