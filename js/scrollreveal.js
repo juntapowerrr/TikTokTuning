@@ -21,7 +21,7 @@
 		duration: 600,
 		easing: 'cubic-bezier(0.5, 0, 0, 1)',
 		interval: 0,
-		opacity: 0.05,
+		opacity: 0,
 		origin: 'bottom',
 		rotate: {
 			x: 0,
