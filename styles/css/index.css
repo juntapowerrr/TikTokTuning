@@ -1240,20 +1240,16 @@ body {
 }
 .tuning .why-tiktok-item h3 {
   color: #FFF;
-  font-size: 82px;
-  font-weight: 900;
+  font-size: 44px;
+  font-weight: 500;
   line-height: 115px;
-}
-.tuning .why-tiktok-item span {
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 60px;
 }
 .tuning .why-tiktok-item p {
   color: #FFF;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: -0.14px;
   margin: 5px 0 0 0;
 }
 
@@ -1486,22 +1482,22 @@ body {
 .price-item {
   border-radius: 12px;
   background: rgba(3, 11, 89, 0.15);
-  padding: 10px 15px;
+  padding: 15px;
   display: flex;
   align-items: center;
   position: relative;
 }
 .price-item p {
   color: #030B59;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 22px;
   max-width: 400px;
 }
 .price-item .check {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 .price-item .check-1 {
   right: 570px;
@@ -2065,9 +2061,8 @@ body {
     line-height: 60px;
   }
   .tuning .why-tiktok-item p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 22px;
-    margin: 0 0 0 0;
   }
 }
 @media (max-width: 1050px) {
