@@ -17,19 +17,11 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     // Output the result in an element with id="timer"
-    document.getElementById("timerHeader").innerHTML = days + "дн : " + hours + "год : "
-    + minutes + "хв : " + seconds + "с";
-    document.getElementById("timerMain").innerHTML = days + "дн : " + hours + "год : "
-    + minutes + "хв : " + seconds + "с";
-    document.getElementById("timerPrice").innerHTML = days + "дн : " + hours + "год : "
-    + minutes + "хв : " + seconds + "с";
+    document.getElementById("timerUser").innerHTML = days + "дн : " + hours + "год : " + minutes + "хв : " + seconds + "с";
 
-    
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("timerHeader").innerHTML = "0дн. " + "0год. " + "0хв. " + "0сек.";
-        document.getElementById("timerMain").innerHTML = "0дн. " + "0год. " + "0хв. " + "0сек.";
-        document.getElementById("timerPrice").innerHTML = "0дн. " + "0год. " + "0хв. " + "0сек.";
+        document.getElementById("timerUser").innerHTML = "0дн : " + "0год : " + "0хв : " + "0с";
     }
 }, 0);

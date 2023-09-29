@@ -292,11 +292,11 @@
         }
     }
 }
-@media (max-width: 500px){
+@media (max-width: 1050px){
     .main{
         overflow: hidden;
         &-left{
-            padding: 0 0 220px 0;
+            padding: 0 0 150px 0;
         }
         &-right{
             display: none;
@@ -304,29 +304,32 @@
         .main-img-mob{
             display: block;
             position: absolute;
-            left: 70px;
-            bottom: 50px;
+            right: 100px;
+            bottom: 0;
             z-index: -100;
-            width: 100%;
-            height: auto;
+            // width: 100%;
+            // height: auto;
             #MainImgMob{
                 display: block;
-                width: 100%;
+                max-width: 400px;
                 height: auto;
             }
-            #MainTTIcon{
-                position: absolute;
-                bottom: 50px;
-                left: -100px;
-            }
-            #MainTTIcon2{
-                width: 43px;
-                height: 44px;
-                position: absolute;
-                top: 140px;
-                right: 0;
-                transform: rotate(-6deg);
-            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .main{
+        &-left{
+            padding: 0 0 280px 0;
+        }
+        &-right{
+            display: none;
+        }
+        .main-img-mob{
+            display: block;
+            position: absolute;
+            right: -80px;
+            bottom: 0;
         }
     }
 }
