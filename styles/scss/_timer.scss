@@ -1,3 +1,19 @@
 .timer{
     font-weight: 600;
+    //display: inline-block;
+}
+
+.dots {
+    animation: tick 1s linear infinite;
+}
+
+
+@keyframes tick {
+    0% {
+      opacity: 0;
+    }
+  
+    20% {
+      opacity: 1;
+    }
 }
