@@ -113,6 +113,25 @@
                 display: none;
             }
         }
+        .card-wrapper{
+            display: block;
+            width: 48%;
+            height: 166px;
+            .card{
+                width: 100%;
+                height: 117px;
+                &:nth-child(1)::after{
+                    display: none;
+                }
+                &:nth-child(1)::before{
+                    display: none;
+                }
+            }
+            .btn{
+                margin: 4px 0 0 0;
+                width: 100%;
+            }
+        }
         .card{
             width: 48%;
             height: 166px;
