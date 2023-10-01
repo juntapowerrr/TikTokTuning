@@ -717,7 +717,7 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 74px;
+  height: 75px;
   align-items: center;
 }
 .header__logo {
