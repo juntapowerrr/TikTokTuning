@@ -13,8 +13,8 @@ $(document).ready(function() {
         $('body').toggleClass('lock');
     });
     $(window).on('scroll', function() {
-        $('#container').css({
-            opacity: 0.5,
+        $('.container').css({
+            opacity: 1,
         })
     });
 
