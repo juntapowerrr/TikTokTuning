@@ -1408,16 +1408,15 @@ body {
   display: none;
   position: relative;
 }
-.price .title-wrapper .mono-img img:first-child {
+.price .title-wrapper .mono-img-1 {
   position: absolute;
   bottom: 0;
   left: 20px;
 }
-.price .title-wrapper .mono-img img:last-child {
+.price .title-wrapper .mono-img-2 {
   position: absolute;
-  top: 0;
-  left: 30px;
-  transform: rotate(40deg);
+  top: -10px;
+  left: 25px;
 }
 .price .title {
   margin: 0 40px 0 0;
