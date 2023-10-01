@@ -700,7 +700,6 @@ body {
   top: 0;
   left: 0;
   z-index: 999;
-  overflow: hidden;
 }
 .header::before {
   content: "";
@@ -712,6 +711,7 @@ body {
   z-index: 2;
   background: linear-gradient(90.07deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
   border-bottom: 1px solid rgba(255, 255, 255, 0.1490196078);
+  overflow: hidden;
 }
 .header__body {
   position: relative;
@@ -1773,6 +1773,11 @@ body {
 @media (max-width: 1150px) {
   .faq .accordion .accordion-item {
     flex: 1 0 100%;
+  }
+}
+@media (max-width: 1150px) {
+  .faq .accordion .accordion-item.hover-btn {
+    transform: translate(0, 0);
   }
 }
 .faq .accordion button {

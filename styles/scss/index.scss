@@ -23,7 +23,6 @@ body{
     top: 0;
     left: 0;
     z-index: 999;
-    overflow: hidden;
     &::before{
         content: '';
         position: absolute;
@@ -35,6 +34,7 @@ body{
         background: linear-gradient(90.07deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%),
         linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
         border-bottom: 1px solid #FFFFFF26;
+        overflow: hidden;
     }
     &__body{
         position: relative;
@@ -1092,6 +1092,11 @@ body{
             flex: 1 0 40%;
             @media (max-width: 1150px){
                 flex: 1 0 100%;
+            }
+        }
+        .accordion-item.hover-btn{
+            @media (max-width: 1150px){
+                transform: translate(0, 0);
             }
         }
         button {
