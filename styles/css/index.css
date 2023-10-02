@@ -973,9 +973,8 @@ body {
 }
 .main-right #MainImg {
   display: block;
-  max-width: 100%;
+  max-width: 550px;
   height: auto;
-  margin: 30px 0 0 0;
 }
 .main .main-img-mob {
   display: none;
@@ -1360,7 +1359,7 @@ body {
 }
 
 .price {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   position: relative;
   overflow: hidden;
 }
