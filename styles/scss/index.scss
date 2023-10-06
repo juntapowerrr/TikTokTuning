@@ -605,6 +605,7 @@ body{
         padding: 12px 32px 12px 12px;
         cursor: pointer;
         border-radius: 12px;
+        border-bottom: 1px solid transparent;
         span:nth-child(1){
             color: var(--Gray, #CFD9E1);
             font-size: 13px;
