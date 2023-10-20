@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оплата успішна - TikTok Tuning - Svitlana Lozinska</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Форма реєстрації - TikTok Tuning - Svitlana Lozinska</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/assets/favicons/favicon-180.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -43,83 +43,27 @@
         <span></span>
     </div>
     <div class="wrapper">
-        <header class="header">
+        <div class="navbar">
             <div class="container">
-                <div class="header__body">
-                    <a href="/" class="header__logo">
-                        <img src="./assets/svg/site-logo.svg" alt="Logo">
-                        <!-- <div class="header__title txt-center">
-                            <p class="header__title-1">TikTok Tuning</p>
-                            <p class="header__title-2">Svitlana Lozinska</p>
-                        </div> -->
+                <div class="navbar-menu">
+                    <a class="navbar-menu-btn" href="./">
+                        <img src="./assets/svg/navbar-btn.svg" alt="Navbar button img">
                     </a>
-                    <div class="header__burger">
-                        <span></span>
-                    </div>
-                    <nav class="header__menu">
-                        <ul class="header__list">
-                            <li class="hover-btn">
-                                <a href="/#SectionTuning" class="header__link" id="HeaderLink1">Про курс</a>
-                            </li>
-                            <li class="hover-btn">
-                                <a href="/#SectionProgram" class="header__link" id="HeaderLink2">Програма</a>
-                            </li>
-                            <li class="hover-btn">
-                                <a href="/#SectionPrice" class="header__link" id="HeaderLink3">Тарифи</a>
-                            </li>
-                            <li class="hover-btn">
-                                <a href="/#SectionAbout" class="header__link" id="HeaderLink4">Навчайся, якщо ти</a>
-                            </li>
-                            <li>
-                                <a href="/#AchievementsSection" class="header__link" id="HeaderLink5">Про автора курсу</a>
-                            </li>
-                            <li>
-                                <a href="/#SectionTuning" class="header__link" id="HeaderLink6">Після тюнингу ти</a>
-                            </li>
-                            <li>
-                                <a href="/#SectionProgram" class="header__link" id="HeaderLink7">Програма курсу</a>
-                            </li>
-                            <li>
-                                <a href="/#SectionPrice" class="header__link" id="HeaderLink8">Купити курс</a>
-                            </li>
-                        </ul>
-                        <p class="cta-txt">Встигни взяти участь. До старту курсу залишилось:
-                            <span class="timer" id="timerSuccess"></span>
-                        </p>
-                        <a href="/#SectionPrice" class="btn btn-cta hover-btn" id="BtnCta1">Взяти участь</a>
-                    </nav>
+                    <h2 class="navbar-menu-title">Форма реєстрації</h2>
                 </div>
             </div>
-        </header>
-        <div class="status">
-            <div class="status-wrapper">
-                <div class="container">
-                    <div class="status-card">
-                        <div class="status-message">
-                            <span>🟢</span>
-                            <span>Оплата пройшла успішно!</span>
-                        </div>
-                        <span class="status-divider"></span>
-                        <div class="status-txt">
-                            <p>
-                                Вже дуже скоро моя команда зв’яжеться з тобою, для уточнення даних, а також надішле усю необхідну інформацію про дати виходу модулів та уроків.
-                            </p>
-                            <p>
-                                Якщо у тебе виникнуть питання, будь ласка, не соромся написати нам в <a href="https://t.me/TikTok_Tuning_Support" target="_blank">підтримку</a>.
-                            </p>
-                            <p>
-                                Нагадую, старт курсу - 16 жовтня 2023. До зустрічі!
-                            </p>
-                            <!-- <p>
-                                До зустрічі на курсі. Света.
-                            </p> -->
-                        </div>
-                        <div class="status-btns">
-                            <a href="/" class="btn btn-cta hover-btn" id="BtnCta1">Продовжити</a>
-                            <!-- <a href="/" class="btn btn-cta2 hover-btn" id="BtnCta1">Прийняти участь</a> -->
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="form">
+            <div class="container">
+                <form action="/send.php" method="post" class="form-card">
+                    <input class="form-input" onkeyup="checkFilled()" type="text" name="name" placeholder="Ваше Ім'я *" required>
+                    <input class="form-input" onkeyup="checkFilled()" type="text" name="telegram" placeholder="Telegram (нікнейм) *" required>
+                    <input class="form-input" onkeyup="checkFilled()" type="tel" name="phone" placeholder="Номер Телефону">
+                    <div class="form-card-divider"></div>
+                    <p>Тариф: <span>Basic</span></p>
+                    <input type="hidden" name="kurs" value="Basic">
+                    <button class="btn btn-cta hover-btn" type="submit">Продовжити</button>
+                </form>
             </div>
         </div>
         <footer class="footer">
@@ -177,6 +121,24 @@
             </div>
         </footer>
     </div>
+    <div class="popup">
+        <div class="container">
+            <div class="popup-card">
+                <div class="status-message">
+                    <span>🤩</span>
+                    <span> Реєстрація успішна</span>
+                </div>
+                <span class="status-divider"></span>
+                <p>
+                    Залишився фінальний крок - оплатити тариф. 
+                    Обирай для себе найзручніший метод оплати та вже скоро зустрінемось на курсі 🤍
+                </p>
+                <form action="/fondy.php" method="post">
+                    <button class="btn btn-cta hover-btn" id="btnBasic" type="submit" value="basic" name="tarif">Сплатити</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script async>
         window.onload = function () {
             document.body.classList.add('loaded_hiding');
@@ -186,7 +148,7 @@
             }, 1000);
         }
     </script>
-    <script async src="./js/timers/timer-success.js"></script>
+    <script src="./js/form.js"></script>
     <script src='./js/scrollreveal.js'></script>
     <script src="./js/animation.js"></script>
     <script src="./js/jquery.fixedheaderscroll.js"></script>

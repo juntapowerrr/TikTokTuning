@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 8, 2023 23:59:59").getTime();
+var countDownDate = new Date("Oct 16, 2023 09:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -19,13 +19,13 @@ var x = setInterval(function() {
     // Output the result in an element with id="timer"
     document.getElementById("timerHeader").innerHTML = `${days}дн <span class="dots">:</span> ${hours}год <span class="dots">:</span> ${minutes}хв <span class="dots">:</span> ${seconds}с`;
     document.getElementById("timerMain").innerHTML = `${days}дн <span class="dots">:</span> ${hours}год <span class="dots">:</span> ${minutes}хв <span class="dots">:</span> ${seconds}с`;
-    document.getElementById("timerPrice").innerHTML = `${days}дн <span class="dots">:</span> ${hours}год <span class="dots">:</span> ${minutes}хв <span class="dots">:</span> ${seconds}с`;
+    //document.getElementById("timerPrice").innerHTML = `${days}дн <span class="dots">:</span> ${hours}год <span class="dots">:</span> ${minutes}хв <span class="dots">:</span> ${seconds}с`;
 
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("timerHeader").innerHTML = `0дн <span class="dots">:</span> 0год <span class="dots">:</span> 0хв <span class="dots">:</span> 0с`;
         document.getElementById("timerMain").innerHTML = `0дн <span class="dots">:</span> 0год <span class="dots">:</span> 0хв <span class="dots">:</span> 0с`;
-        document.getElementById("timerPrice").innerHTML = `0}дн <span class="dots">:</span> 0    год <span class="dots">:</span> 0хв <span class="dots">:</span> 0с`;
+        //document.getElementById("timerPrice").innerHTML = `0}дн <span class="dots">:</span> 0    год <span class="dots">:</span> 0хв <span class="dots">:</span> 0с`;
     }
 }, 1000);

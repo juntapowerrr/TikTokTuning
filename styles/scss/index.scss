@@ -1013,21 +1013,21 @@ body{
         }
     }
 
-    &-box-mob > .price-box-mob__card:nth-child(1){
-        .price-box-mob__card-price::after{
-            content: '₴8 950';
-        }
-    }
-    &-box-mob > .price-box-mob__card:nth-child(2){
-        .price-box-mob__card-price::after{
-            content: '₴14 510';
-        }
-    }
-    &-box-mob > .price-box-mob__card:nth-child(3){
-        .price-box-mob__card-price::after{
-            content: '₴21 150';
-        }
-    }
+    // &-box-mob > .price-box-mob__card:nth-child(1){
+    //     .price-box-mob__card-price::after{
+    //         content: '₴8 950';
+    //     }
+    // }
+    // &-box-mob > .price-box-mob__card:nth-child(2){
+    //     .price-box-mob__card-price::after{
+    //         content: '₴14 510';
+    //     }
+    // }
+    // &-box-mob > .price-box-mob__card:nth-child(3){
+    //     .price-box-mob__card-price::after{
+    //         content: '₴21 150';
+    //     }
+    // }
     &-box-mob > .price-box-mob__card:nth-child(2){
         background: var(--CTA, linear-gradient(90deg, #00042F 5.71%, rgba(0, 4, 47, 0.99) 89.23%));
         .price-box-mob__card-title{
